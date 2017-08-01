@@ -1,0 +1,161 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+.logo-image {
+    height: 100px;
+}
+
+.main-body {
+    min-height: 800px;
+    padding-top: 100px;
+    background: transparent url(../images/mountain-image.jpg) top no-repeat;
+    width: 100%;
+    font-size: 0.8em;
+
+    margin-top: 20px;
+}
+
+.cvTitle {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.quick-links {
+    list-style-type: none;
+    -webkit-padding-start: 10px;
+}
+
+.panel-qualification {
+    background-color: #eff2f3;
+    text-align: center;
+}
+
+.panel-qualification-border {
+    border: 1px solid #eff2f3;
+    text-align: center;
+}
+
+
+.img-responsive-qualification {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .lead {
+        font-size: 16px;
+    }
+}
+.navbar-default-transition {
+    background-color: #f8f8f8;
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    -webkit-transition: background 1s;
+    transition: background 1s;
+}
+.navbar-default-transition-back {
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    -webkit-transition: background 1s;
+    transition: background 1s;
+}
+.navbar-default-border {
+    border-color: #e7e7e7;
+}
+
+
+.cvSection {
+    margin-bottom:15px;
+}
+	
+.cvTitle {
+    font-family: Arial Black,Arial,Sans-Serif;
+    font-size:x-large;
+}
+
+.cvAddress {
+    float: right;
+    margin-right: 20px;
+}
+
+ul.cvList {
+    margin-left:20px;
+    list-style-type:circle;
+    margin-bottom: 5px;
+}
+
+.cvAchievements li{
+    padding-bottom: 5px;
+}
+
+.cvClient {
+    font-size: 1.4em;
+}
+
+.cvWorkTimeSpan {
+    font-size:0.7em;
+    margin-left:5px;
+}
+
+.cvSection {
+    /*background: url();*/
+}
+
+.cvRole {
+    font-weight: bold;
+}
+
+.cvJob {
+    margin-bottom:10px;
+    padding-left: 10px;
+}
+
+.cvJobDetail {
+    padding-left: 15px;
+}
+.cvWebsites {
+    display: block;
+    padding-bottom: 10px;
+}
+.cvWebsites span {
+    float: left;
+}
+.cvWebsites ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+}
+.cvWebsites li {
+    float: left;
+    padding-left: 10px
+}
+
+.mcTitle {
+    font-family: Arial Black, Arial, Sans-Serif;
+}
+
+.mcText {
+    font-style:italic;
+}
+
+.smoothscroll {
+    
+}

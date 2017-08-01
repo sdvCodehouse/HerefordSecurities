@@ -1,0 +1,117 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hereford Securities Ltd</title>
+    <meta name="description" content="This site provides information about the services and client history of Hereford Securities Ltd. Trading company for Simon Da Vall" />
+    <meta name="keywords" content="Simon Da Vall, Da Vall, Hereford Securities, HSL, C#, C# Development, Web Development, Asp.Net" /> 
+    <link rel="Stylesheet" href="~/css/reset.css" />
+    <link rel="Stylesheet" href="~/css/hsl.css" />
+
+    <script src="~/scripts/hsl.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <div id="logo">
+            <img id="HSL_logo" src="~/images/HSL_Logo.gif" alt="Hereford Securities Ltd" />
+        </div>
+        <div id="navbar">
+            @Html.ActionLink("HOME", "Index") | @Html.ActionLink("SERVICES", "Services") | @Html.ActionLink("CONTACT", "ContactMe") <br/>
+            @Html.ActionLink("LEGACY HOME", "LegacyHome") | @Html.ActionLink("LEGACY SERVICES", "LegacyServices") | @Html.ActionLink("LEGACY CONTACT", "LegacyContactMe")
+        </div>
+    </div>
+
+    <!-- Put blue and grey boxes in this section -->
+
+
+    <div id="mainContent">
+        <div id="contentColumn">
+            <h2>Services</h2>
+    
+            <div class="first service">
+                <h3>C# / ASP.NET Development</h3>
+                <img class="imageright" src="~/images/web_development.jpg" alt="Application development" />
+                <p>Hereford Securities is first and foremost a provider of full lifecycle software development consulting services. Whether from project inception, or final push to delivery, Hereford has a proven track record for success.</p>
+                <p>We will analyze and document your project requirements, architect, design, code, test, and deliver your web or windows software projects on time and under budget.</p>
+                <p>We bring an expert set of business analysis, project management and software development skills to work in creating your custom software development solution. We guarantee a clean and robust software product that is easy to maintain and works like you want it to.</p>
+                <p>Understanding that throughout the lifetime of the project, clients requirements will change, and reacting to that, being mindful of budget and time constraints. Employing Agile methodologies such as SCRUM allowing great flexibility in project delivery. </p>
+            </div>
+            <div class="service">    
+                <h3>CMS Development</h3>
+                <img class="imageright" src="~/images/cms.jpg" alt="CMS development" />
+                <p>Hereford Securities has created complicated content management systems using Sitecore and EPIServer CMS systems.</p>
+                <p>Using Microsoft technologies to provide data components for:</p>
+                <ul class="contentList">
+                    <li>Media streaming</li>
+                    <li>Remots xml data streaming</li>
+                    <li>Image presentation</li>
+                    <li>Shopping cart</li>
+                    <li>Search engine</li>
+                    <li>Membership systems</li>
+                </ul>
+            </div>
+            <div class="service">    
+                <h3>Database Design & Development</h3>
+                <img class="imageright" src="~/images/databaseDesign.jpg" alt="Database Design & Development" />
+                <p>A carefully thought-out database design forms the foundation for future success of any solution.</p>
+                <p>Hereford Securities are able to provide expert schema/script design and development in a fast-paced, high-growth and flexible environment. Good design and development will support the business analysts in the development of specific product requirements, through formulating designs to fulfil the requirements, and will provide development expertise to produce reliable, solid, maintainable code. Hereford Securities has experience in supporting extended life-cycle areas including implementation, database administration, and report development.</p>
+                <p>We design, write and develop database code to support Web based applications, including utilities and queries for testing, monitoring, and administration of the database and related applications:</p>
+                <ul class="contentList">
+                    <li>Development environments include desktop, n-tier client server background and more recently Internet-based data-driven products.</li>
+                    <li>Full supporting documentation for program development and usage of application:</li>
+                    <li>Adherence to established software development guidelines and procedures.</li>
+                    <ul>
+                        <li>system specifications and sub-systems specifications.</li>
+                        <li>planning and preparation stages documentation.</li>
+                    </ul>
+                    <li>Experience in working with third-party experts to accomplish specific projects and tasks.</li>
+                    <li>Provide assistance in estimating project timelines.</li>
+                </ul>
+            </div>
+            <div class="service">    
+                <h3>Project Management</h3>
+                <img class="imageright" src="~/images/PM.jpg" alt="Project Management" />
+                <p>Hereford Securities has a flexible approach to project management. It is recognised that each project requires tailored management. Each project manager is fully qualified to practitioner level, and is experienced in identifying the elements of the Prince2 methodology appropriate for the project and making a set of recommendations. In many cases, clients may wish to incorporate some of their own established practices to the methodology.</p>
+                <p>We will fully discuss these requirements with the client at the outset to ensure a best practice that is truly achievable is not only agreed upon but fully understood.</p>
+            </div>
+
+
+
+    
+        </div>
+        <!-- end of contentColumn section -->
+        <div id="rightdevices">
+            <div class="bluebox bluelinks">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="http://www.microsoft.com">Microsoft</a></li>
+                    <li><a href="http://www.experts-exchange.com/">Experts Exchange</a></li>
+                    <li><a href="http://headfirstlabs.com/">Head First Books</a></li>
+                    <li><a href="http://www.bcs.org/">British Computer Society</a></li>
+                </ul>
+            </div>
+            <img class="bluebox_base" alt="Bluebox bottom" src="~/images/bluebox_btmcap.gif" />
+        </div>
+        <!-- end of rightDevices section -->
+    </div>
+    <!-- end of mainContent section -->  
+    <div id="footer">
+        <div id="footernav">
+            <a href="index.htm">HOME</a> | <a href="services.htm">SERVICES</a> | <a href="clients.htm">
+                CLIENTS</a> | <a href="cv.htm">CV</a> | <a href="contactus.htm">CONTACT US</a>
+        </div>
+        <p>&copy;2009 <a href="index.htm">Hereford Securities Ltd</a></p>
+    </div>
+    <!-- end of footer section -->
+</div>
+<!-- end of container section -->
+
+</body>
+</html>
