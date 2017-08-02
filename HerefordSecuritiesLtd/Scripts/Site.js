@@ -6,16 +6,16 @@
     // the following fades the opaque navbar in and out when the user scrolls down a bit.
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll >= 100) {
+        if (scroll >= 10) {
             header.removeClass("navbar-default-transition-back")
                 .addClass("navbar-default-transition");
             // As the border is darker the following is set to add the border class
             // after the background has fadded in.
             if (!borderTimeout) {
                 borderTimeout = setTimeout(function () {
-                        header.addClass("navbar-default-border");
-                        borderActionCompleted = true;
-                    },
+                    header.addClass("navbar-default-border");
+                    borderActionCompleted = true;
+                },
                     700);
             }
         } else {
@@ -34,7 +34,7 @@
     //The reverse of the above on hidden event:
 
     $('#workExperience .cvJobDetail').on('hidden.bs.collapse',
-        function() {
+        function () {
             $(this).prev().find(".fa").removeClass("fa-angle-right").addClass("fa-angle-down");
         });
 
@@ -60,17 +60,7 @@
                     $('html, body').animate({
                         scrollTop: target.offset().top - menuHeightOffset
                     }, 1000, function () {
-                        // Callback after animation
-                        // Must change focus!
-                        // Update: Original code set focus, but this is not necessary
-                        //var $target = $(target);
-                        //$target.focus();
-                        //if ($target.is(":focus")) { // Checking if the target was focused
-                        //    return false;
-                        //} else {
-                        //    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                        //    $target.focus(); // Set focus again
-                        //};
+                        return false;
                     });
                 }
             }
