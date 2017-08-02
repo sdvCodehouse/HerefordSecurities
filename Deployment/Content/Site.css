@@ -125,10 +125,6 @@ ul.cvList {
     font-weight: bold;
 }
 
-.cv-skills {
-    
-}
-
 .cvSection {
     margin-bottom: 15px;
 }
@@ -297,13 +293,8 @@ ul.cvList {
     }
 }
 
-.pdfDownload {
-    vertical-align:top;
-    padding-left: 2px;
-}
-
-.pdfImage {
-    margin-top:-3px;
+.white-border {
+    border: 1px solid white;
 }
 
 .services-main {
@@ -317,10 +308,6 @@ ul.cvList {
 
 .sidebar {
     margin-top: 40px;
-}
-
-.white-border {
-    border: 1px solid white;
 }
 
 #workExperience .fa {

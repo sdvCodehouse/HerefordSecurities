@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+    <script language="javascript" src="~/Scripts/hsl.js"></script>
+
+    <title>Hereford Securities Ltd</title>
+    <meta name="description" content="This site provides information about the services and client history of Hereford Securities Ltd. Trading company for Simon Da Vall" />
+    <meta name="keywords" content="Simon Da Vall, Da Vall, Hereford Securities, Sitecore, HSL, C#, C# Development, Web Development, Asp.Net" />
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+<body id="topOfPage">
+    <header class="container">
+
+        <div id="menu" class="navbar navbar-fixed-top">
+            <div class="col-md-8 col-md-offset-2">
+
+                <div class="navbar-header">
+                    <button class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <div id="logo">
+                        <a href=".">
+                            <img id="HSL_logo" class="img-responsive logo-image" src="~/images/HSL_Logo.gif" alt="Hereford Securities Ltd" />
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav active">
+                            @Html.ActionLink("Home", "Index", "Home")
+                        </li>
+                        <li class="nav">
+                            @Html.ActionLink("Services", "Services", "Home")
+                        </li>
+                        <li class="nav">
+                            @Html.ActionLink("Contact", "ContactMe", "Home")
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <section id="body" class="container main-body background-image">
+        <div class="col-md-10 col-md-offset-2">
+            @RenderBody()
+        </div>
+    </section>
+    <hr class="footer-hr" />
+    <footer class="container">
+
+        <div id="footermenu" class="">
+            <div class="footer-copyright">&copy; @DateTime.Now.Year - Hereford Securities Ltd</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav active">
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li class="nav">
+                    @Html.ActionLink("Services", "Services", "Home")
+                </li>
+                <li class="nav">
+                    @Html.ActionLink("Contact", "ContactMe", "Home")
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Site.js"></script>
+</body>
+</html>
