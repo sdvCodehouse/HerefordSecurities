@@ -55,10 +55,23 @@
             @RenderBody()
         </div>
     </section>
-    <hr />
+    <hr class="footer-hr" />
     <footer class="container">
-        <p>&copy; @DateTime.Now.Year - Hereford Securities Ltd</p>
-        @Html.ActionLink("HOME", "Index") | @Html.ActionLink("SERVICES", "Services") | @Html.ActionLink("CONTACT", "ContactMe")
+
+        <div id="footermenu" class="">
+            <div class="footer-copyright">&copy; @DateTime.Now.Year - Hereford Securities Ltd</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav active">
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li class="nav">
+                    @Html.ActionLink("Services", "Services", "Home")
+                </li>
+                <li class="nav">
+                    @Html.ActionLink("Contact", "ContactMe", "Home")
+                </li>
+            </ul>
+        </div>
     </footer>
 
 
