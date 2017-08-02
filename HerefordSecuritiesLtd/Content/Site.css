@@ -22,7 +22,7 @@ textarea {
 
 .main-body {
     min-height: 800px;
-    padding-top: 100px;
+    padding-top: 170px;
     background: transparent url(../images/mountain-image.jpg) top no-repeat;
     width: 100%;
     font-size: 0.8em;
@@ -64,17 +64,25 @@ textarea {
     }
 }
 
-.cvMain {
-    margin-top: 120px;
+.contact-main {
+
+}
+.contact-details {
+    margin-top: 40px;
 }
 
-.sidebar {
-    margin-top: 50px;
+.contact-map {
+     margin-top: 20px;
+}
+
+.cvMain {
+    
 }
 
 .cvTitle {
     font-family: "Arial Black", Arial, sans-serif;
     font-size: x-large;
+    margin-top: 70px;
     margin-bottom: 20px;
 }
 
@@ -233,3 +241,6 @@ ul.cvList {
     } 
 }
   
+.sidebar {
+    margin-top: 40px;
+}

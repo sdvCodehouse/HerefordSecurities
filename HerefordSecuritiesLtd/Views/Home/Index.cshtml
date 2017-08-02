@@ -3,14 +3,14 @@
     }*@
 
 <div id="main-body">
-    <h4>Curriculum Vitae</h4>
-    <p class="pdfDownload bluelinks">
-        <img class="pdfImage" src="~/content/images/download.png" alt="" width="9" height="10" />
-        <a class="pdfDownload" href="~/content/downloads/SimonDaVall-CV.pdf" target="_blank">Download pdf version</a><br />
-    </p>
-    <div class="row">
 
+    <div class="row">
         <section id="main" class="cvMain col-md-8 col-sm-9">
+            <h4>Curriculum Vitae</h4>
+            <p class="pdfDownload bluelinks">
+                <img class="pdfImage" src="~/content/images/download.png" alt="" width="9" height="10" />
+                <a class="pdfDownload" href="~/content/downloads/SimonDaVall-CV.pdf" target="_blank">Download pdf version</a><br />
+            </p>
             <div id="cvProfile" class="cvTitle">Simon Da Vall</div>
             <p class="lead">
                 A highly successful <strong>C# / ASP.Net Analyst Programmer</strong>, with over <strong>15 years</strong> experience,
@@ -78,7 +78,7 @@
                         <a href="http://www.codehousegroup.com/" target="_blank">Codehouse Group</a>
                         <span class="cvWorkTimeSpan">(Apr 2016 – Mar 2017)</span>
                     </p>
-                    <div id="job6" class="cvJobDetail collapse in">
+                    <div id="job6" class="cvJobDetail collapse">
                         <p class="cvRole">Lead Developer / Technical Architect</p>
                         <p class="cvSkills">Key Skills: C# 5.0 / Sitecore 6.5 / TeamCity / Octopus / Agile / NUnit</p>
                         <div class="cvWebsites">
@@ -97,7 +97,7 @@
                         <a href="http://www.cpcconnect.co.uk" target="_blank">CPC Connect Ltd</a>
                         <span class="cvWorkTimeSpan">(Dec 2015 – Mar 2016)</span>
                     </p>
-                    <div id="job5" class="cvJobDetail collapse in">
+                    <div id="job5" class="cvJobDetail collapse">
                         <p class="cvRole">Contract .Net Developer</p>
                         <p class="cvSkills">Key Skills: C# 5.0 / WebAPI / Angular.js / NUnit / Docker Containers / Agile / TDD</p>
                         <div class="cvWebsites">
@@ -116,7 +116,7 @@
                         <a href="http://www.codehousegroup.com/" target="_blank">Codehouse Group</a>
                         <span class="cvWorkTimeSpan">(May 2015 – Dec 2015)</span>
                     </p>
-                    <div id="job4" class="cvJobDetail collapse in">
+                    <div id="job4" class="cvJobDetail collapse">
                         <p class="cvRole">Lead Developer</p>
                         <p class="cvSkills">Key Skills: C# 5.0 / Sitecore 7.1-8.1 / ASP.NET 4.5 / MVC4 / Agile / NUnit</p>
                         <div class="cvWebsites">
@@ -144,7 +144,7 @@
                         Training Qualification & Property Management
                         <span class="cvWorkTimeSpan">(Oct 2014 – Apr 2015)</span>
                     </p>
-                    <div id="job3" class="cvJobDetail collapse in">
+                    <div id="job3" class="cvJobDetail collapse">
                         <p>Took time away from contracting to organise the rennovation of an overseas property and to brush up on training and professional qualifications.</p>
                         <p>During this period I attended the Sitecore XP 7.1 Web Developer qualification upgrade course and attained developer cerfification.</p>
                     </div>
@@ -155,7 +155,7 @@
                         <a href="http://www.ry.com" target="_blank">Radley Yeldar</a>
                         <span class="cvWorkTimeSpan">(Jan 2014 – Sept 2014)</span>
                     </p>
-                    <div id="job2" class="cvJobDetail collapse in">
+                    <div id="job2" class="cvJobDetail collapse">
                         <p class="cvRole">Technical Architect / Programmer</p>
                         <p class="cvSkills">Key Skills: C# 4.0 / Sitecore 6.5 / ASP.NET 4.0 / MVC3 / XSLT / Agile / NUnit</p>
                         <div class="cvWebsites">
@@ -183,7 +183,7 @@
                         <a href="http://www.codehousegroup.com/" target="_blank">Codehouse Group</a>
                         <span class="cvWorkTimeSpan">(Sept 2013 – Dec 2013)</span>
                     </p>
-                    <div id="job1" class="cvJobDetail collapse in">
+                    <div id="job1" class="cvJobDetail collapse">
                         <p class="cvRole">Developer</p>
                         <p class="cvSkills">Key Skills: C# 4.0 / Sitecore 6.5 / ASP.NET 4 / Agile / TFS</p>
                         <div class="cvWebsites">
@@ -346,41 +346,7 @@
                 </div>
 
             </div>
-            <div class="panel panel-qualification-border">
-                <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/content/images/sitecore-certified-developer.jpg" alt="Sitecore Certified Developer" />
-                    @*<p class="mcTitle">Sitecore Certified .Net Developer</p>*@
-                    <p class="mcText">
-                        Sitecore® XP 7 Website Development for .NET Developers
-                    </p>
-                </div>
-            </div>
-            <div class="panel panel-qualification">
-                <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/content/images/p2logo.gif" alt="Prince2 Practitioner Qualified" />
-                    <p class="mcTitle">Prince2 Practitioner</p>
-                </div>
-            </div>
-            <div class="panel panel-qualification">
-                <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/content/images/MCPD_Logo_grey.gif" alt="Microsoft Certified Professional Developer" />
-                    <p>
-                        <div class="mcTitle">Enterprise Applications Developer</div>
-                    </p>
-                </div>
-            </div>
-            <div class="panel panel-qualification">
-                <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/content/images/MCTS_Logo_grey.gif" alt="Microsoft Certified Technical Specialist" />
-                    <p class="mcTitle">.Net Framework</p>
-                    <p class="mcText">
-                        Windows Applications<br />
-                        Distributed Applications<br />
-                        Web Applications
-                    </p>
-                </div>
-            </div>
-
+            @Html.Partial("_Qualifications");
         </section>
     </div>
 </div>
