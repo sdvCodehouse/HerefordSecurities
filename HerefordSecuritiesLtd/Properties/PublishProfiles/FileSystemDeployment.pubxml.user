@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Simon\Documents\Visual Studio 2013\Projects\HerefordSecuritiesLtd\Deployment</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/HerefordSecuritiesLtd.dll">
+      <publishTime>08/02/2017 16:27:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/31/2017 09:44:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/31/2017 09:44:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/31/2017 09:44:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>07/31/2017 09:44:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>07/31/2017 09:44:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>07/31/2017 09:44:14</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Content/Downloads/SimonDaVall-CV.pdf">
+      <publishTime>08/02/2017 15:53:43</publishTime>
+    </File>
+    <File Include="Content/font-awesome.css">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="Content/Images/cms.jpg">
+      <publishTime>08/02/2017 16:11:43</publishTime>
+    </File>
+    <File Include="Content/Images/databaseDesign.jpg">
+      <publishTime>08/02/2017 16:11:43</publishTime>
+    </File>
+    <File Include="Content/Images/download.png">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/HSL_Logo.gif">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/MCPD_Logo_grey.gif">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/MCTS_Logo_grey.gif">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/mountain-image.jpg">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/mountain_btm.jpg">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/mountain_top.jpg">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/p2logo.gif">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/PM.jpg">
+      <publishTime>08/02/2017 16:11:43</publishTime>
+    </File>
+    <File Include="Content/Images/sitecore-certified-developer.jpg">
+      <publishTime>08/02/2017 09:16:33</publishTime>
+    </File>
+    <File Include="Content/Images/web_development.jpg">
+      <publishTime>08/02/2017 16:11:43</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/02/2017 16:42:47</publishTime>
+    </File>
+    <File Include="css/hsl.css">
+      <publishTime>07/29/2017 16:43:17</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>07/29/2017 16:43:23</publishTime>
+    </File>
+    <File Include="downloads/SimonDaVall-CV.pdf">
+      <publishTime>02/08/2009 13:06:14</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>07/31/2017 09:45:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/31/2017 09:44:13</publishTime>
+    </File>
+    <File Include="images/background.jpg">
+      <publishTime>01/29/2009 20:50:56</publishTime>
+    </File>
+    <File Include="images/bcslogo.gif">
+      <publishTime>02/06/2009 00:51:28</publishTime>
+    </File>
+    <File Include="images/bluebox_btmcap.gif">
+      <publishTime>01/29/2009 10:45:20</publishTime>
+    </File>
+    <File Include="images/bluebox_bullet.gif">
+      <publishTime>01/27/2009 10:42:24</publishTime>
+    </File>
+    <File Include="images/bluebox_rail.gif">
+      <publishTime>01/29/2009 10:45:22</publishTime>
+    </File>
+    <File Include="images/bluebox_topcap.gif">
+      <publishTime>01/29/2009 10:45:22</publishTime>
+    </File>
+    <File Include="images/cms.jpg">
+      <publishTime>02/11/2009 14:06:06</publishTime>
+    </File>
+    <File Include="images/contentLine.jpg">
+      <publishTime>01/29/2009 20:56:42</publishTime>
+    </File>
+    <File Include="images/databaseDesign.jpg">
+      <publishTime>02/10/2009 12:07:40</publishTime>
+    </File>
+    <File Include="images/download.png">
+      <publishTime>02/06/2009 15:14:40</publishTime>
+    </File>
+    <File Include="images/footer.gif">
+      <publishTime>01/30/2009 15:11:18</publishTime>
+    </File>
+    <File Include="images/footer_btmcap.gif">
+      <publishTime>01/29/2009 14:47:04</publishTime>
+    </File>
+    <File Include="images/footer_rail.gif">
+      <publishTime>01/29/2009 15:17:48</publishTime>
+    </File>
+    <File Include="images/footer_topcap.gif">
+      <publishTime>01/29/2009 14:45:20</publishTime>
+    </File>
+    <File Include="images/greybox_btmcap.gif">
+      <publishTime>01/29/2009 10:45:20</publishTime>
+    </File>
+    <File Include="images/greybox_rail.gif">
+      <publishTime>01/29/2009 10:45:22</publishTime>
+    </File>
+    <File Include="images/greybox_topcap.gif">
+      <publishTime>01/29/2009 10:45:20</publishTime>
+    </File>
+    <File Include="images/HeinekenWeb.jpg">
+      <publishTime>05/05/2010 18:52:30</publishTime>
+    </File>
+    <File Include="images/HeinekenWeb.psd">
+      <publishTime>05/05/2010 18:52:50</publishTime>
+    </File>
+    <File Include="images/Heineken_Page1.jpg">
+      <publishTime>05/05/2010 16:33:56</publishTime>
+    </File>
+    <File Include="images/Heineken_Page2.jpg">
+      <publishTime>05/05/2010 17:35:24</publishTime>
+    </File>
+    <File Include="images/HSL_Button_Logo.png">
+      <publishTime>12/18/2015 16:01:38</publishTime>
+    </File>
+    <File Include="images/HSL_Logo.gif">
+      <publishTime>01/22/2009 15:18:30</publishTime>
+    </File>
+    <File Include="images/HSL_Logo_bluematte.gif">
+      <publishTime>01/30/2009 08:58:18</publishTime>
+    </File>
+    <File Include="images/imglogo.gif">
+      <publishTime>01/29/2009 19:48:16</publishTime>
+    </File>
+    <File Include="images/ManUtdBlueLogo.jpg">
+      <publishTime>02/06/2009 19:05:56</publishTime>
+    </File>
+    <File Include="images/ManUtdWeb.jpg">
+      <publishTime>05/05/2010 11:45:40</publishTime>
+    </File>
+    <File Include="images/MCN_Logo.gif">
+      <publishTime>02/12/2009 08:37:10</publishTime>
+    </File>
+    <File Include="images/MCPD_Logo_grey.gif">
+      <publishTime>02/06/2009 00:05:00</publishTime>
+    </File>
+    <File Include="images/MCTS_Logo_grey.gif">
+      <publishTime>02/05/2009 23:27:34</publishTime>
+    </File>
+    <File Include="images/mountain-image.jpg">
+      <publishTime>07/31/2017 12:00:19</publishTime>
+    </File>
+    <File Include="images/Mountain1.jpg">
+      <publishTime>01/29/2009 09:21:26</publishTime>
+    </File>
+    <File Include="images/Mountain2.jpg">
+      <publishTime>01/29/2009 09:22:58</publishTime>
+    </File>
+    <File Include="images/mountain_btm.jpg">
+      <publishTime>01/30/2009 18:02:20</publishTime>
+    </File>
+    <File Include="images/mountain_top.jpg">
+      <publishTime>01/30/2009 18:01:36</publishTime>
+    </File>
+    <File Include="images/p2logo.gif">
+      <publishTime>02/12/2009 08:33:14</publishTime>
+    </File>
+    <File Include="images/PM.jpg">
+      <publishTime>02/11/2009 13:44:38</publishTime>
+    </File>
+    <File Include="images/ra.jpg">
+      <publishTime>02/12/2009 08:41:12</publishTime>
+    </File>
+    <File Include="images/sitecore-certified-developer.jpg">
+      <publishTime>07/31/2017 20:33:20</publishTime>
+    </File>
+    <File Include="images/TG_Logo.gif">
+      <publishTime>02/12/2009 08:38:26</publishTime>
+    </File>
+    <File Include="images/under-construction.gif">
+      <publishTime>01/30/2009 18:19:38</publishTime>
+    </File>
+    <File Include="images/under-construction.jpg">
+      <publishTime>01/19/2009 09:24:24</publishTime>
+    </File>
+    <File Include="images/WebDevLifecycle.jpg">
+      <publishTime>07/29/2017 16:46:27</publishTime>
+    </File>
+    <File Include="images/web_development.jpg">
+      <publishTime>02/11/2009 13:14:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/31/2017 09:46:53</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>07/31/2017 09:45:22</publishTime>
+    </File>
+    <File Include="Scripts/hsl.js">
+      <publishTime>07/29/2017 16:44:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>07/31/2017 09:45:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>07/31/2017 09:45:21</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.map">
+      <publishTime>07/31/2017 09:45:21</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>07/31/2017 09:46:53</publishTime>
+    </File>
+    <File Include="Scripts/Site.js">
+      <publishTime>08/02/2017 15:58:45</publishTime>
+    </File>
+    <File Include="Views/Home/ContactMe.cshtml">
+      <publishTime>08/02/2017 15:58:45</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>08/02/2017 16:24:09</publishTime>
+    </File>
+    <File Include="Views/Home/LegacyContactMe.cshtml">
+      <publishTime>07/31/2017 10:52:26</publishTime>
+    </File>
+    <File Include="Views/Home/LegacyHome.cshtml">
+      <publishTime>07/31/2017 11:01:31</publishTime>
+    </File>
+    <File Include="Views/Home/LegacyServices.cshtml">
+      <publishTime>07/31/2017 10:52:26</publishTime>
+    </File>
+    <File Include="Views/Home/Services.cshtml">
+      <publishTime>08/02/2017 16:12:53</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>08/02/2017 16:40:01</publishTime>
+    </File>
+    <File Include="Views/Shared/_Qualifications.cshtml">
+      <publishTime>08/02/2017 11:47:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_UsefulLinks.cshtml">
+      <publishTime>08/02/2017 15:58:45</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>07/31/2017 09:44:14</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>07/31/2017 09:46:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/02/2017 15:59:34</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
