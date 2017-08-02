@@ -16,19 +16,6 @@ textarea {
     max-width: 280px;
 }*/
 
-.logo-image {
-    height: 100px;
-}
-
-.main-body {
-    min-height: 800px;
-    padding-top: 170px;
-    background: transparent url(../images/mountain-image.jpg) top no-repeat;
-    width: 100%;
-    font-size: 0.8em;
-    margin-top: 20px;
-}
-
 .background-image {
     /*background-origin: content-box;*/
     -ms-background-position: 80% 0px;
@@ -36,6 +23,7 @@ textarea {
     -ms-background-size: 100%;
     background-size: 100%;
 }
+
 @Media (min-width: 768px) {
     .background-image {
         /*background-origin: content-box;*/
@@ -45,6 +33,7 @@ textarea {
         background-size: 90%;
     }
 }
+
 @Media (min-width: 992px) {
     .background-image {
         /*background-origin: content-box;*/
@@ -54,6 +43,7 @@ textarea {
         background-size: 80%;
     }
 }
+
 @Media (min-width: 1200px) {
     .background-image {
         /*background-origin: content-box;*/
@@ -64,19 +54,66 @@ textarea {
     }
 }
 
-.contact-main {
-
+.content-list {
+    list-style-position: inside;
+    margin-left: 40px;
+    list-style-type: disc;
+    margin-bottom: 5px;
+    overflow: hidden;
 }
+
+    .content-list li {
+        margin-bottom: 5px;
+    }
+
+.contact-main {
+}
+
 .contact-details {
     margin-top: 40px;
 }
 
 .contact-map {
-     margin-top: 20px;
+    margin-top: 20px;
 }
 
 .cvMain {
-    
+}
+
+.cvAchievements li {
+    padding-bottom: 5px;
+}
+
+.cvAddress {
+    float: right;
+    margin-right: 20px;
+}
+
+.cvClient {
+    font-size: 1.4em;
+}
+
+.cvJob {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.cvJobDetail {
+    padding-left: 15px;
+}
+
+ul.cvList {
+    margin-left: 20px;
+    list-style-type: circle;
+    margin-bottom: 5px;
+}
+
+.cvRole {
+    font-weight: bold;
+}
+
+.cvSection {
+    margin-bottom: 15px;
 }
 
 .cvTitle {
@@ -86,19 +123,31 @@ textarea {
     margin-bottom: 20px;
 }
 
-.quick-links {
-    list-style-type: none;
-    -webkit-padding-start: 10px;
+.cvWebsites {
+    display: block;
+    padding-bottom: 10px;
 }
 
-.panel-qualification {
-    background-color: #eff2f3;
-    text-align: center;
-}
+    .cvWebsites span {
+        float: left;
+    }
 
-.panel-qualification-border {
-    border: 1px solid #eff2f3;
-    text-align: center;
+    .cvWebsites ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: block;
+    }
+
+    .cvWebsites li {
+        float: left;
+        padding-left: 10px;
+    }
+
+.cvWorkTimeSpan {
+    font-size: 0.7em;
+    margin-left: 5px;
 }
 
 .img-responsive-qualification {
@@ -111,6 +160,31 @@ textarea {
         font-size: 16px;
     }
 }
+
+.logo-image {
+    height: 100px;
+    margin-top: 5px;
+}
+
+.main-body {
+    min-height: 800px;
+    padding-top: 170px;
+    background: transparent url(../images/mountain-image.jpg) top no-repeat;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-collapse {
+        text-align: inherit;
+    }
+}
+
 .navbar-default-transition {
     background-color: #f8f8f8;
     -ms-transition: background 1s;
@@ -118,114 +192,78 @@ textarea {
     -webkit-transition: background 1s;
     transition: background 1s;
 }
+
 .navbar-default-transition-back {
     -ms-transition: background 1s;
     -o-transition: background 1s;
     -webkit-transition: background 1s;
     transition: background 1s;
 }
+
 .navbar-default-border {
     border-color: #e7e7e7;
 }
 
-
-.cvSection {
-    margin-bottom:15px;
-}
-	
-.cvTitle {
-    font-family: Arial Black,Arial,Sans-Serif;
-    font-size:x-large;
+.navbar-fast-transition {
+    background-color: #f8f8f8;
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    -webkit-transition: background 1s;
+    transition: background 0.2s;
 }
 
-.cvAddress {
-    float: right;
-    margin-right: 20px;
+.navbar-fast-transition-back {
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    -webkit-transition: background 1s;
+    transition: background 0.2s;
 }
 
-ul.cvList {
-    margin-left:20px;
-    list-style-type:circle;
-    margin-bottom: 5px;
+.panel-qualification {
+    background-color: #eff2f3;
+    text-align: center;
 }
 
-.cvAchievements li{
-    padding-bottom: 5px;
+.panel-qualification-border {
+    border: 1px solid #eff2f3;
+    text-align: center;
 }
 
-.cvClient {
-    font-size: 1.4em;
-}
-
-.cvWorkTimeSpan {
-    font-size:0.7em;
-    margin-left:5px;
-}
-
-.cvSection {
-    /*background: url();*/
-}
-
-.cvRole {
-    font-weight: bold;
-}
-
-.cvJob {
-    margin-bottom:10px;
-    padding-left: 10px;
-}
-
-.cvJobDetail {
-    padding-left: 15px;
-}
-.cvWebsites {
-    display: block;
-    padding-bottom: 10px;
-}
-.cvWebsites span {
-    float: left;
-}
-.cvWebsites ul {
+.quick-links {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: block;
+    -webkit-padding-start: 10px;
 }
-.cvWebsites li {
-    float: left;
-    padding-left: 10px
-}
+
 
 .mcTitle {
     font-family: Arial Black, Arial, Sans-Serif;
 }
 
 .mcText {
-    font-style:italic;
+    font-style: italic;
 }
 
 .smoothscroll {
-    
 }
 
 #gmap {
     margin-top: 100px;
 }
+
 #map_canvas {
-    width: auto; 
+    width: auto;
     height: 553px;
     border: 1px solid black;
     margin-bottom: 20px;
 }
-#map_canvas iframe {
-    width:100%;
-    height:100%;
-}
+
+    #map_canvas iframe {
+        width: 100%;
+        height: 100%;
+    }
 
 #footermenu {
-    
-}   
+}
 
 .footer-hr {
     margin-bottom: 0;
@@ -234,13 +272,28 @@ ul.cvList {
 .footer-copyright {
     padding-top: 15px;
     float: none;
-}  
+}
+
 @Media (min-width: 768px) {
     .footer-copyright {
-        float:left;
-    } 
+        float: left;
+    }
 }
-  
+
+.white-border {
+    border: 1px solid white;
+}
+
+.services-main {
+    margin-top: 60px;
+}
+
+.service {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
 .sidebar {
     margin-top: 40px;
 }
