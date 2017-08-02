@@ -3,27 +3,45 @@
     var header = $(".navbar");
     var borderTimeout;
     var borderActionCompleted = false;
+
+    var makeMenuOpaque = function (transitionType) {
+        header.removeClass("navbar-" + transitionType + "-transition-back")
+            .addClass("navbar-" + transitionType + "-transition");
+        // As the border is darker the following is set to add the border class
+        // after the background has fadded in.
+        if (!borderTimeout) {
+            borderTimeout = setTimeout(function () {
+                    header.addClass("navbar-default-border");
+                    borderActionCompleted = true;
+                },
+                700);
+        }
+    }
+    var makeMenuTransparent = function(transitionType) {
+        header.removeClass("navbar-" + transitionType + "-transition").addClass("navbar-" + transitionType + "-transition-back");
+        clearTimeout(borderTimeout);
+        borderTimeout = null;
+        header.removeClass("navbar-default-border");
+    }
+
     // the following fades the opaque navbar in and out when the user scrolls down a bit.
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll >= 10) {
-            header.removeClass("navbar-default-transition-back")
-                .addClass("navbar-default-transition");
-            // As the border is darker the following is set to add the border class
-            // after the background has fadded in.
-            if (!borderTimeout) {
-                borderTimeout = setTimeout(function () {
-                    header.addClass("navbar-default-border");
-                    borderActionCompleted = true;
-                },
-                    700);
-            }
+            makeMenuOpaque("default");
         } else {
-            header.removeClass("navbar-default-transition").addClass("navbar-default-transition-back");
-            clearTimeout(borderTimeout);
-            borderTimeout = null;
-            header.removeClass("navbar-default-border");
+            makeMenuTransparent("default");
         }
+    });
+
+    // The following two functions toggle the background trasparency for the mobile menu
+    // when clicked
+    $('#menu .navbar-collapse').on('show.bs.collapse', function () {
+        makeMenuOpaque("fast");
+    });
+
+    $('#menu .navbar-collapse').on('hidden.bs.collapse', function () {
+        makeMenuTransparent("fast");
     });
 
     // The following two functions toggles the indicator up/down the icon on a collapse panel.
