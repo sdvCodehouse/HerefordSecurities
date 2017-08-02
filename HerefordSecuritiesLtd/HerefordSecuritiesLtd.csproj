@@ -86,6 +86,15 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\download.png" />
+    <Content Include="Content\Images\HSL_Logo.gif" />
+    <Content Include="Content\Images\MCPD_Logo_grey.gif" />
+    <Content Include="Content\Images\MCTS_Logo_grey.gif" />
+    <Content Include="Content\Images\mountain-image.jpg" />
+    <Content Include="Content\Images\mountain_btm.jpg" />
+    <Content Include="Content\Images\mountain_top.jpg" />
+    <Content Include="Content\Images\p2logo.gif" />
+    <Content Include="Content\Images\sitecore-certified-developer.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="css\hsl.css" />
     <Content Include="css\reset.css" />
@@ -107,6 +116,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="downloads\SimonDaVall-CV.pdf" />
     <Content Include="images\HeinekenWeb.psd" />
+    <Content Include="Content\Downloads\SimonDaVall-CV.pdf" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="images\background.jpg" />
     <Content Include="images\bcslogo.gif" />

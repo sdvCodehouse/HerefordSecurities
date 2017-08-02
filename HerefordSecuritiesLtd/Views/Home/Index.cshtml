@@ -1,13 +1,16 @@
 ﻿@*@{
         ViewBag.Title = "Index";
     }*@
-<div>
-    @Html.ActionLink("LEGACY HOME", "LegacyHome") | @Html.ActionLink("LEGACY SERVICES", "LegacyServices") | @Html.ActionLink("LEGACY CONTACT", "LegacyContactMe")
-</div>
-<div style="margin-top: 120px">
-    <div class="row">
-        <section id="main" class="col-md-8 col-sm-9">
 
+<div id="main-body">
+    <h4>Curriculum Vitae</h4>
+    <p class="pdfDownload bluelinks">
+        <img class="pdfImage" src="~/content/images/download.png" alt="" width="9" height="10" />
+        <a class="pdfDownload" href="~/content/downloads/SimonDaVall-CV.pdf" target="_blank">Download pdf version</a><br />
+    </p>
+    <div class="row">
+
+        <section id="main" class="cvMain col-md-8 col-sm-9">
             <div id="cvProfile" class="cvTitle">Simon Da Vall</div>
             <p class="lead">
                 A highly successful <strong>C# / ASP.Net Analyst Programmer</strong>, with over <strong>15 years</strong> experience,
@@ -51,7 +54,9 @@
                 </ul>
 
             </section>
-            <p><a id="cvAchievements" class="smoothscroll" href="#topOfPage">Back to top</a></p>
+            <p>
+                <a id="cvAchievements" class="smoothscroll" href="#topOfPage">Back to top</a>
+            </p>
             <section>
                 <h3>Achievements</h3>
                 <ul>
@@ -62,7 +67,9 @@
                     <li><strong>Asyst For Schools</strong> – Lead developer and project manager for the development of a Schools Administration system for a leading independent school. This software was subsequently adopted by eight other independent schools.</li>
                 </ul>
             </section>
-            <p><a id="cvExperience" class="smoothscroll" href="#topOfPage">Back to top</a></p>
+            <p>
+                <a id="cvExperience" class="smoothscroll" href="#topOfPage">Back to top</a>
+            </p>
             <section id="workExperience">
                 <h3>Work Experience</h3>
                 <div class="cvJob">
@@ -191,7 +198,9 @@
                 </div>
                 <section id="otherWork">
                     @*<h3>Other Contracts and Employment<span class="caret"></span></h3>*@
-                    <h3 class=""><a href="#otherJobs" data-toggle="collapse">Other Contracts and Employment</a></h3>
+                    <h3 class="">
+                        <a href="#otherJobs" data-toggle="collapse">Other Contracts and Employment</a>
+                    </h3>
                     <div id="otherJobs" class="collapse">
                         <div class="cvJob">
                             <p class="cvClient bluelinks">
@@ -308,7 +317,9 @@
                     </div>
                 </section>
             </section>
-            <p><a id="cvInterests" class="smoothscroll" href="#topOfPage">Back to top</a></p>
+            <p>
+                <a id="cvInterests" class="smoothscroll" href="#topOfPage">Back to top</a>
+            </p>
             <section>
                 <h3>Interests</h3>
                 <ul>
@@ -317,7 +328,7 @@
                 </ul>
             </section>
         </section>
-        <section id="sidebar" class="col-md-3 col-sm-3 hidden-xs">
+        <section id="sidebar" class="sidebar col-md-3 col-sm-3 hidden-xs">
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -337,7 +348,7 @@
             </div>
             <div class="panel panel-qualification-border">
                 <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/images/sitecore-certified-developer.jpg" alt="Sitecore Certified Developer" />
+                    <img class="img-responsive-qualification" src="~/content/images/sitecore-certified-developer.jpg" alt="Sitecore Certified Developer" />
                     @*<p class="mcTitle">Sitecore Certified .Net Developer</p>*@
                     <p class="mcText">
                         Sitecore® XP 7 Website Development for .NET Developers
@@ -346,13 +357,13 @@
             </div>
             <div class="panel panel-qualification">
                 <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/images/p2logo.gif" alt="Prince2 Practitioner Qualified" />
+                    <img class="img-responsive-qualification" src="~/content/images/p2logo.gif" alt="Prince2 Practitioner Qualified" />
                     <p class="mcTitle">Prince2 Practitioner</p>
                 </div>
             </div>
             <div class="panel panel-qualification">
                 <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/images/MCPD_Logo_grey.gif" alt="Microsoft Certified Professional Developer" />
+                    <img class="img-responsive-qualification" src="~/content/images/MCPD_Logo_grey.gif" alt="Microsoft Certified Professional Developer" />
                     <p>
                         <div class="mcTitle">Enterprise Applications Developer</div>
                     </p>
@@ -360,7 +371,7 @@
             </div>
             <div class="panel panel-qualification">
                 <div class="panel-body">
-                    <img class="img-responsive-qualification" src="~/images/MCTS_Logo_grey.gif" alt="Microsoft Certified Technical Specialist" />
+                    <img class="img-responsive-qualification" src="~/content/images/MCTS_Logo_grey.gif" alt="Microsoft Certified Technical Specialist" />
                     <p class="mcTitle">.Net Framework</p>
                     <p class="mcText">
                         Windows Applications<br />

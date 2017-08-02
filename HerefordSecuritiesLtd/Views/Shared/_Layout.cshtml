@@ -7,6 +7,8 @@
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 
+    <script language="javascript" src="~/Scripts/hsl.js"></script>
+
     <title>Hereford Securities Ltd</title>
     <meta name="description" content="This site provides information about the services and client history of Hereford Securities Ltd. Trading company for Simon Da Vall" />
     <meta name="keywords" content="Simon Da Vall, Da Vall, Hereford Securities, Sitecore, HSL, C#, C# Development, Web Development, Asp.Net" />
@@ -19,6 +21,7 @@
 
         <div id="menu" class="navbar navbar-fixed-top">
             <div class="col-md-8 col-md-offset-2">
+
                 <div class="navbar-header">
                     <button class="btn btn-success navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="glyphicon glyphicon-chevron-down"></span>
@@ -42,11 +45,12 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
         </div>
 
     </header>
-    <section id="body" class="container main-body">
+    <section id="body" class="container main-body background-image">
         <div class="col-md-10 col-md-offset-2">
             @RenderBody()
         </div>
