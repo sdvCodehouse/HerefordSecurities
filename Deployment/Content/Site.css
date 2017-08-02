@@ -21,8 +21,8 @@ a:hover, a:focus {
 
 .background-image {
     /*background-origin: content-box;*/
-    -ms-background-position: 80% 0px;
-    background-position: 80% 0px;
+    -ms-background-position: 80% 0;
+    background-position: 80% 0;
     -ms-background-size: 100%;
     background-size: 100%;
 }
@@ -30,8 +30,8 @@ a:hover, a:focus {
 @Media (min-width: 768px) {
     .background-image {
         /*background-origin: content-box;*/
-        -ms-background-position: 70% 0px;
-        background-position: 70% 0px;
+        -ms-background-position: 70% 0;
+        background-position: 70% 0;
         -ms-background-size: 90%;
         background-size: 90%;
     }
@@ -40,8 +40,8 @@ a:hover, a:focus {
 @Media (min-width: 992px) {
     .background-image {
         /*background-origin: content-box;*/
-        -ms-background-position: 100% 0px;
-        background-position: 100% 0px;
+        -ms-background-position: 100% 0;
+        background-position: 100% 0;
         -ms-background-size: 80%;
         background-size: 80%;
     }
@@ -50,8 +50,8 @@ a:hover, a:focus {
 @Media (min-width: 1200px) {
     .background-image {
         /*background-origin: content-box;*/
-        -ms-background-position: 70% 0px;
-        background-position: 70% 0px;
+        -ms-background-position: 70% 0;
+        background-position: 70% 0;
         -ms-background-size: 70%;
         background-size: 70%;
     }
@@ -125,6 +125,10 @@ ul.cvList {
     font-weight: bold;
 }
 
+.cv-skills {
+    
+}
+
 .cvSection {
     margin-bottom: 15px;
 }
@@ -182,7 +186,7 @@ ul.cvList {
 .main-body {
     min-height: 800px;
     padding-top: 170px;
-    background: transparent url(../images/mountain-image.jpg) top no-repeat;
+    background: transparent url(../Content/images/mountain-image.jpg) top no-repeat;
     width: 100%;
     font-size: 0.8em;
     margin-top: 20px;
@@ -293,8 +297,13 @@ ul.cvList {
     }
 }
 
-.white-border {
-    border: 1px solid white;
+.pdfDownload {
+    vertical-align:top;
+    padding-left: 2px;
+}
+
+.pdfImage {
+    margin-top:-3px;
 }
 
 .services-main {
@@ -308,6 +317,10 @@ ul.cvList {
 
 .sidebar {
     margin-top: 40px;
+}
+
+.white-border {
+    border: 1px solid white;
 }
 
 #workExperience .fa {

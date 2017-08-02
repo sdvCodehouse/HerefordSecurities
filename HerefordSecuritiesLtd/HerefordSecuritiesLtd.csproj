@@ -118,6 +118,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Content\Downloads\SimonDaVall-CV.pdf" />
     <None Include="Properties\PublishProfiles\FileSystemDeployment.pubxml" />
+    <None Include="Properties\PublishProfiles\LiveFtpDeployment.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
