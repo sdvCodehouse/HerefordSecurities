@@ -47,6 +47,7 @@
     // The following two functions toggles the indicator up/down the icon on a collapse panel.
     $('#workExperience .cvJobDetail').on('shown.bs.collapse', function () {
         $(this).prev().find(".fa").removeClass("fa-angle-down").addClass("fa-angle-right");
+        $(this).prev().find(".client-weblink").removeClass("hidden");
     });
 
     //The reverse of the above on hidden event:
@@ -54,6 +55,7 @@
     $('#workExperience .cvJobDetail').on('hidden.bs.collapse',
         function () {
             $(this).prev().find(".fa").removeClass("fa-angle-right").addClass("fa-angle-down");
+            $(this).prev().find(".client-weblink").addClass("hidden");
         });
 
     // This function enables smooth scrolling to a page anchor

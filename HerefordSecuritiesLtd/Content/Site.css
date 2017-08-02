@@ -15,6 +15,9 @@ select,
 textarea {
     max-width: 280px;
 }*/
+a:hover, a:focus {
+    text-decoration: none;
+}
 
 .background-image {
     /*background-origin: content-box;*/
@@ -52,6 +55,16 @@ textarea {
         -ms-background-size: 70%;
         background-size: 70%;
     }
+}
+
+.client-weblink {
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+.client-footnote {
+    font-size: 0.7em;
+    font-style: italic;
 }
 
 .content-list {
@@ -293,7 +306,10 @@ ul.cvList {
     margin-bottom: 10px;
 }
 
-
 .sidebar {
     margin-top: 40px;
+}
+
+#workExperience .fa {
+    padding-right: 5px;
 }
