@@ -37,7 +37,7 @@
 
             @Html.Partial("_Qualifications")
             
-            <div class="footer-version">Version: @Assembly.GetExecutingAssembly().GetName().Version.ToString() </div>
+            <div class="footer-version">Version: @typeof(MvcApplication).Assembly.GetName().Version.ToString() </div>
         </section>
     </div>
 </div>
