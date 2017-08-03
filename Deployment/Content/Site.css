@@ -21,8 +21,9 @@ a:hover, a:focus {
 
 .background-image {
     /*background-origin: content-box;*/
-    -ms-background-position: 80% 0;
-    background-position: 80% 0;
+    background: transparent url(../Content/images/mountain-image.jpg) top no-repeat;
+    -ms-background-position: 80% 40px;
+    background-position: 80% 40px;
     -ms-background-size: 100%;
     background-size: 100%;
 }
@@ -186,7 +187,6 @@ ul.cvList {
 .main-body {
     min-height: 800px;
     padding-top: 170px;
-    background: transparent url(../Content/images/mountain-image.jpg) top no-repeat;
     width: 100%;
     font-size: 0.8em;
     margin-top: 20px;
