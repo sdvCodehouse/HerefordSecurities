@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/HerefordSecuritiesLtd.dll">
-      <publishTime>08/02/2017 18:53:52</publishTime>
+      <publishTime>08/03/2017 14:15:10</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>07/31/2017 09:44:14</publishTime>
@@ -64,46 +64,46 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/31/2017 09:45:40</publishTime>
     </File>
     <File Include="Content/Images/cms.jpg">
-      <publishTime>08/02/2017 18:16:43</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/databaseDesign.jpg">
-      <publishTime>08/02/2017 18:16:43</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/download.png">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/HSL_Logo.gif">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/MCPD_Logo_grey.gif">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/MCTS_Logo_grey.gif">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/mountain-image.jpg">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/mountain_btm.jpg">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/mountain_top.jpg">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/p2logo.gif">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/PM.jpg">
-      <publishTime>08/02/2017 18:16:43</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/sitecore-certified-developer.jpg">
-      <publishTime>08/02/2017 18:14:18</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Images/web_development.jpg">
-      <publishTime>08/02/2017 18:16:43</publishTime>
+      <publishTime>08/03/2017 13:33:19</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>08/02/2017 19:00:18</publishTime>
+      <publishTime>08/03/2017 14:12:50</publishTime>
     </File>
     <File Include="css/hsl.css">
       <publishTime>07/29/2017 16:43:17</publishTime>
@@ -307,13 +307,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/31/2017 09:46:53</publishTime>
     </File>
     <File Include="Scripts/Site.js">
-      <publishTime>08/02/2017 18:16:22</publishTime>
+      <publishTime>08/03/2017 13:33:20</publishTime>
     </File>
     <File Include="Views/Home/ContactMe.cshtml">
-      <publishTime>08/02/2017 18:16:22</publishTime>
+      <publishTime>08/03/2017 14:12:50</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/02/2017 18:16:43</publishTime>
+      <publishTime>08/03/2017 14:12:50</publishTime>
     </File>
     <File Include="Views/Home/LegacyContactMe.cshtml">
       <publishTime>07/31/2017 10:52:26</publishTime>
@@ -325,16 +325,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/31/2017 10:52:26</publishTime>
     </File>
     <File Include="Views/Home/Services.cshtml">
-      <publishTime>08/02/2017 18:16:43</publishTime>
+      <publishTime>08/03/2017 14:12:50</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/02/2017 18:16:43</publishTime>
+      <publishTime>08/03/2017 14:05:47</publishTime>
     </File>
     <File Include="Views/Shared/_Qualifications.cshtml">
-      <publishTime>08/02/2017 18:15:49</publishTime>
+      <publishTime>08/03/2017 14:12:50</publishTime>
     </File>
     <File Include="Views/Shared/_UsefulLinks.cshtml">
-      <publishTime>08/02/2017 18:16:22</publishTime>
+      <publishTime>08/03/2017 13:33:20</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>07/31/2017 09:44:14</publishTime>

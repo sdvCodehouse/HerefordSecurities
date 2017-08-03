@@ -1,11 +1,12 @@
-﻿@{
+﻿@using System.Reflection
+@{
     ViewBag.Title = "Services";
 }
 
 <div>
     <div class="row">
         <section id="main" class="contact-main col-md-8 col-sm-9">
-            <h4>Services</h4>
+            <h4 class="main-body-title">Services</h4>
             <div class="services-main">
                 <div class="service">
                     <h3>C# / ASP.NET Development</h3>
@@ -21,7 +22,7 @@
                     <p>Hereford Securities has created complicated content management systems using Sitecore and EPIServer CMS systems.</p>
                     <p>Using Microsoft technologies to provide data components for:</p>
                     <div>
-                        <ul class="content-list">
+                        <ul>
                             <li>Media streaming</li>
                             <li>Remote xml data streaming</li>
                             <li>Image presentation</li>
@@ -38,7 +39,7 @@
                     <p>A carefully thought-out database design forms the foundation for future success of any solution.</p>
                     <p>Hereford Securities are able to provide expert schema/script design and development in a fast-paced, high-growth and flexible environment. Good design and development will support the business analysts in the development of specific product requirements, through formulating designs to fulfil the requirements, and will provide development expertise to produce reliable, solid, maintainable code. Hereford Securities has experience in supporting extended life-cycle areas including implementation, database administration, and report development.</p>
                     <p>We design, write and develop database code to support Web based applications, including utilities and queries for testing, monitoring, and administration of the database and related applications:</p>
-                    <ul class="content-list">
+                    <ul>
                         <li>Development environments include desktop, n-tier client server background and more recently Internet-based data-driven products.</li>
                         <li>Full supporting documentation for program development and usage of application:</li>
                         <li>Adherence to established software development guidelines and procedures.</li>
@@ -60,10 +61,10 @@
         </section>
         <section id="sidebar" class="sidebar col-md-3 col-sm-3 hidden-xs">
 
-            @Html.Partial("_UsefulLinks");
+            @Html.Partial("_UsefulLinks")
 
-            @Html.Partial("_Qualifications");
-
+            @Html.Partial("_Qualifications")
+            
         </section>
     </div>
 </div>
