@@ -1,35 +1,24 @@
-﻿/*body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}*/
-
-/* Set padding to keep content from hitting the edges */
-/*.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}*/
-
-/* Set width on the form input elements since they're 100% wide by default */
-/*input,
-select,
-textarea {
-    max-width: 280px;
-}*/
-a:hover, a:focus {
+﻿a:hover, a:focus {
     text-decoration: none;
 }
 
 .background-image {
-    /*background-origin: content-box;*/
-    -ms-background-position: 80% 0;
-    background-position: 80% 0;
+    background: transparent url(../Content/images/mountain-image.jpg) top no-repeat;
+    -ms-background-position: 80% 40px;
+    background-position: 80% 40px;
     -ms-background-size: 100%;
     background-size: 100%;
 }
 
+@Media (min-width: 450px) {
+    .background-image {
+        -ms-background-position: 80% 0;
+        background-position: 80% 0;
+    }
+}
+
 @Media (min-width: 768px) {
     .background-image {
-        /*background-origin: content-box;*/
         -ms-background-position: 70% 0;
         background-position: 70% 0;
         -ms-background-size: 90%;
@@ -39,7 +28,6 @@ a:hover, a:focus {
 
 @Media (min-width: 992px) {
     .background-image {
-        /*background-origin: content-box;*/
         -ms-background-position: 100% 0;
         background-position: 100% 0;
         -ms-background-size: 80%;
@@ -49,7 +37,6 @@ a:hover, a:focus {
 
 @Media (min-width: 1200px) {
     .background-image {
-        /*background-origin: content-box;*/
         -ms-background-position: 70% 0;
         background-position: 70% 0;
         -ms-background-size: 70%;
@@ -67,23 +54,17 @@ a:hover, a:focus {
     font-style: italic;
 }
 
-.content-list {
-    list-style-position: inside;
-    margin-left: 40px;
-    list-style-type: disc;
-    margin-bottom: 5px;
-    overflow: hidden;
-}
-
-    .content-list li {
-        margin-bottom: 5px;
-    }
-
 .contact-main {
 }
 
 .contact-details {
-    margin-top: 40px;
+    margin-top: 0;
+}
+
+@Media(min-width: 450px) {
+    .contact-details {
+        margin-top: 40px;
+    }
 }
 
 .contact-map {
@@ -93,63 +74,58 @@ a:hover, a:focus {
 .cvMain {
 }
 
-.cvAchievements li {
+.cv-achievements li {
     padding-bottom: 5px;
 }
 
-.cvAddress {
-    float: right;
-    margin-right: 20px;
-}
-
-.cvClient {
+.cv-client {
     font-size: 1.4em;
 }
 
-.cvJob {
+.cv-datespan {
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+.cv-job {
     margin-bottom: 10px;
     padding-left: 10px;
 }
 
-.cvJobDetail {
+.cv-job-detail {
     padding-left: 15px;
 }
 
-ul.cvList {
-    margin-left: 20px;
-    list-style-type: circle;
-    margin-bottom: 5px;
-}
-
-.cvRole {
+.cv-role {
     font-weight: bold;
 }
 
 .cv-skills {
-    
 }
 
-.cvSection {
-    margin-bottom: 15px;
-}
-
-.cvTitle {
+.cv-title {
     font-family: "Arial Black", Arial, sans-serif;
     font-size: x-large;
-    margin-top: 70px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.cvWebsites {
+@Media(min-width: 768px) {
+    .cv-title {
+        margin-top: 70px;
+    }
+}
+
+.cv-website {
     display: block;
     padding-bottom: 10px;
 }
 
-    .cvWebsites span {
+    .cv-website span {
         float: left;
     }
 
-    .cvWebsites ul {
+    .cv-website ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -157,14 +133,26 @@ ul.cvList {
         display: block;
     }
 
-    .cvWebsites li {
+    .cv-website li {
         float: left;
         padding-left: 10px;
     }
 
-.cvWorkTimeSpan {
-    font-size: 0.7em;
-    margin-left: 5px;
+#footermenu {
+}
+
+.footer-copyright {
+    padding-top: 15px;
+    float: none;
+}
+
+.footer-hr {
+    margin-bottom: 0;
+}
+
+.footer-version {
+    font-size: 0.5em;
+    text-align: right;
 }
 
 .img-responsive-qualification {
@@ -179,17 +167,38 @@ ul.cvList {
 }
 
 .logo-image {
-    height: 100px;
+    height: 80px;
     margin-top: 5px;
+}
+
+@Media(min-width: 768px) {
+    .logo-image {
+        height: 100px;
+    }
 }
 
 .main-body {
     min-height: 800px;
-    padding-top: 170px;
-    background: transparent url(../Content/images/mountain-image.jpg) top no-repeat;
+    padding-top: 140px;
     width: 100%;
     font-size: 0.8em;
     margin-top: 20px;
+}
+
+@Media (min-width: 450px) {
+    .main-body {
+        padding-top: 170px;
+    }
+}
+
+.main-body-title {
+    text-align: right;
+}
+
+@Media(min-width: 768px) {
+    .main-body-title {
+        text-align: left;
+    }
 }
 
 .navbar .navbar-collapse {
@@ -263,10 +272,6 @@ ul.cvList {
 .smoothscroll {
 }
 
-#gmap {
-    margin-top: 100px;
-}
-
 #map_canvas {
     width: auto;
     height: 553px;
@@ -279,40 +284,55 @@ ul.cvList {
         height: 100%;
     }
 
-#footermenu {
-}
-
-.footer-hr {
-    margin-bottom: 0;
-}
-
-.footer-copyright {
-    padding-top: 15px;
-    float: none;
-}
-
 @Media (min-width: 768px) {
     .footer-copyright {
         float: left;
     }
 }
 
-.pdfDownload {
-    vertical-align:top;
+.pdf-download {
+    vertical-align: top;
     padding-left: 2px;
 }
 
-.pdfImage {
-    margin-top:-3px;
+.pdf-image {
+    margin-top: -3px;
 }
 
 .services-main {
-    margin-top: 60px;
+    margin-top: 10px;
+}
+
+@Media(min-width: 768px) {
+    .services-main {
+        margin-top: 60px;
+    }
 }
 
 .service {
     overflow: hidden;
     margin-bottom: 10px;
+}
+
+    .service ul {
+        list-style-type: disc;
+        margin-bottom: 5px;
+        overflow: hidden;
+        padding-left: 15px;
+    }
+
+    .service li {
+        margin-bottom: 5px;
+    }
+
+@Media(min-width: 768px) {
+    .service ul {
+        padding-left: 40px;
+    }
+}
+
+.service li {
+    margin-bottom: 5px;
 }
 
 .sidebar {
