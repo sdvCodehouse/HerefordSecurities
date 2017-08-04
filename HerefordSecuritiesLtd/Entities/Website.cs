@@ -6,5 +6,6 @@
         public string Sitename { get; set; }
         public string Sitelink { get; set; }
         public int WorkExperienceId { get; set; }
+        public int DisplayOrder { get; set; }
     }
 }

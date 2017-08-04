@@ -11,107 +11,107 @@ using HerefordSecuritiesLtd.Entities;
 
 namespace HerefordSecuritiesLtd.Admin.Controllers
 {
-    public class WebsitesController : Controller
+    public class AchievementsController : Controller
     {
         private HerefordSecuritiesDb db = new HerefordSecuritiesDb();
 
-        // GET: Websites
+        // GET: Achievements
         public async Task<ActionResult> Index()
         {
-            return View(await db.Websites.ToListAsync());
+            return View(await db.Achievements.ToListAsync());
         }
 
-        // GET: Websites/Details/5
+        // GET: Achievements/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Website website = await db.Websites.FindAsync(id);
-            if (website == null)
+            Achievement achievement = await db.Achievements.FindAsync(id);
+            if (achievement == null)
             {
                 return HttpNotFound();
             }
-            return View(website);
+            return View(achievement);
         }
 
-        // GET: Websites/Create
+        // GET: Achievements/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Websites/Create
+        // POST: Achievements/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Sitename,Sitelink,WorkExperienceId,DisplayOrder")] Website website)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Title,Narrative,DisplayOrder,IsActive,siteDataId")] Achievement achievement)
         {
             if (ModelState.IsValid)
             {
-                db.Websites.Add(website);
+                db.Achievements.Add(achievement);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(website);
+            return View(achievement);
         }
 
-        // GET: Websites/Edit/5
+        // GET: Achievements/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Website website = await db.Websites.FindAsync(id);
-            if (website == null)
+            Achievement achievement = await db.Achievements.FindAsync(id);
+            if (achievement == null)
             {
                 return HttpNotFound();
             }
-            return View(website);
+            return View(achievement);
         }
 
-        // POST: Websites/Edit/5
+        // POST: Achievements/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Sitename,Sitelink,WorkExperienceId,DisplayOrder")] Website website)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Title,Narrative,DisplayOrder,IsActive,siteDataId")] Achievement achievement)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(website).State = EntityState.Modified;
+                db.Entry(achievement).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(website);
+            return View(achievement);
         }
 
-        // GET: Websites/Delete/5
+        // GET: Achievements/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Website website = await db.Websites.FindAsync(id);
-            if (website == null)
+            Achievement achievement = await db.Achievements.FindAsync(id);
+            if (achievement == null)
             {
                 return HttpNotFound();
             }
-            return View(website);
+            return View(achievement);
         }
 
-        // POST: Websites/Delete/5
+        // POST: Achievements/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Website website = await db.Websites.FindAsync(id);
-            db.Websites.Remove(website);
+            Achievement achievement = await db.Achievements.FindAsync(id);
+            db.Achievements.Remove(achievement);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

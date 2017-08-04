@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HerefordSecuritiesLtd.Entities.Website>
+﻿@model IEnumerable<HerefordSecuritiesLtd.Entities.Achievement>
 
 @{
     ViewBag.Title = "Index";
@@ -17,16 +17,19 @@
 			<th></th>
 			<th>Id</th>
 					<th>
-				@Html.DisplayNameFor(model => model.Sitename)
+				@Html.DisplayNameFor(model => model.Title)
 			</th>
 					<th>
-				@Html.DisplayNameFor(model => model.Sitelink)
-			</th>
-					<th>
-				@Html.DisplayNameFor(model => model.WorkExperienceId)
+				@Html.DisplayNameFor(model => model.Narrative)
 			</th>
 					<th>
 				@Html.DisplayNameFor(model => model.DisplayOrder)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.IsActive)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.siteDataId)
 			</th>
 			</tr>
 
@@ -56,22 +59,27 @@
 			</td>
 					<td>
 				<div class="table-row-condensed">
-					@Html.DisplayFor(modelItem => item.Sitename)
+					@Html.DisplayFor(modelItem => item.Title)
 				</div>
 			</td>
 					<td>
 				<div class="table-row-condensed">
-					@Html.DisplayFor(modelItem => item.Sitelink)
-				</div>
-			</td>
-					<td>
-				<div class="table-row-condensed">
-					@Html.DisplayFor(modelItem => item.WorkExperienceId)
+					@Html.DisplayFor(modelItem => item.Narrative)
 				</div>
 			</td>
 					<td>
 				<div class="table-row-condensed">
 					@Html.DisplayFor(modelItem => item.DisplayOrder)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.IsActive)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.siteDataId)
 				</div>
 			</td>
 			</tr>

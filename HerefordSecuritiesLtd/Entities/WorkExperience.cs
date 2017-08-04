@@ -24,5 +24,19 @@ namespace HerefordSecuritiesLtd.Entities
         public int SiteDataId { get; set; }
         public bool IsActive { get; set; }
         public bool IsRecent { get; set; }
+
+        public string FormatedDateSpan
+        {
+            get { return string.Format("({0:MMM yy} - {1:MMM yy})", DateFrom, DateTo); }
+        }
+
+        public string JobId
+        {
+            get { return string.Format("job{0}", Id); }
+        }
+        public string JobIdPointer
+        {
+            get { return string.Format("#{0}", JobId); }
+        }
     }
 }

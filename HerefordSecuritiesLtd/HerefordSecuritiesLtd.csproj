@@ -155,16 +155,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SiteDataController.cs" />
+    <Compile Include="Entities\Achievement.cs" />
     <Compile Include="Entities\HerefordSecuritiesDb.cs" />
     <Compile Include="Entities\IRepository.cs" />
     <Compile Include="Entities\ServiceImage.cs" />
     <Compile Include="Entities\ServiceProvided.cs" />
     <Compile Include="Entities\Website.cs" />
+    <Compile Include="Entities\WorkExperience.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Entities\SiteData.cs" />
-    <Compile Include="Entities\WorkExperience.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
