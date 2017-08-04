@@ -1,0 +1,106 @@
+﻿@model HerefordSecuritiesLtd.Entities.WorkExperience
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WorkExperience</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientWeblink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientWeblink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientAdditional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientAdditional)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KeySkills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KeySkills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Narrative)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Narrative)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteDataId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiteDataId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRecent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsRecent)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

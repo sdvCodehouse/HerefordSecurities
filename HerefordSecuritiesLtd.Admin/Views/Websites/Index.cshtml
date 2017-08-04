@@ -1,0 +1,53 @@
+﻿@model IEnumerable<HerefordSecuritiesLtd.Entities.Website>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="table-responsive">
+	<table class="table table-striped table-condensed">
+		<tr>
+					<th>
+				@Html.DisplayNameFor(model => model.Sitename)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.Sitelink)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.WorkExperienceId)
+			</th>
+				<th></th>
+		</tr>
+
+	@foreach (var item in Model) {
+		<tr>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.Sitename)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.Sitelink)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.WorkExperienceId)
+				</div>
+			</td>
+				<td>
+				@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+				@Html.ActionLink("Details", "Details", new { id=item.Id }) |
+				@Html.ActionLink("Delete", "Delete", new { id=item.Id })
+			</td>
+			</tr>
+	}
+
+	</table>
+</div>

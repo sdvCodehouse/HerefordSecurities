@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/fontawesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
+
+
+    <title>Hereford Securities Ltd</title>
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+<body id="topOfPage">
+    <header class="container">
+
+        <div id="menu" class="navbar ">
+            <div class="col-sm-4">
+
+                <div class="navbar-header">
+                    <button class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <div id="logo">
+                        <a href=".">
+                            <img id="HSL_logo" class="img-responsive logo-image" style="height:100px" src="~/Content/images/HSL_Logo.gif" alt="Hereford Securities Ltd" />
+                        </a>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="col-sm-4">
+                <h1>Administration</h1>
+            </div>
+            <div class="col-sm-4">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-default  navbar-right">
+                        <li class="nav active">
+                            @Html.ActionLink("Home", "Index", "Home")
+                        </li>
+                        <li class="nav">
+                            @Html.ActionLink("SiteData", "Index", "SiteData")
+                        </li>
+                        <li class="nav">
+                            @Html.ActionLink("Contact", "ContactMe", "Home")
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <hr />
+    <section id="body" class="container well">
+        @RenderBody()
+    </section>
+    <hr class="footer-hr" />
+    <footer class="container">
+
+        <div id="footermenu" class="">
+            <div class="footer-copyright">&copy; @DateTime.Now.Year - Hereford Securities Ltd</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav active">
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li class="nav">
+                    @Html.ActionLink("Services", "Services", "Home")
+                </li>
+                <li class="nav">
+                    @Html.ActionLink("Contact", "ContactMe", "Home")
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Site.js"></script>
+</body>
+</html>

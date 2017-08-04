@@ -1,4 +1,6 @@
-﻿@*@{
+﻿@using System.Data.Entity.Infrastructure
+@model IndexViewModel
+@*@{
         ViewBag.Title = "Index";
     }*@
 
@@ -6,55 +8,29 @@
 
     <div class="row">
         <section id="main" class="cvMain col-md-8 col-sm-9">
-            <div class="main-body-title">
-                <h4>Curriculum Vitae</h4>
-                <p class="pdf-download">
-                    <img class="pdf-image" src="~/content/images/download.png" alt="" width="9" height="10" />
-                    <a class="pdf-download" href="~/content/downloads/SimonDaVall-CV.pdf" target="_blank">Download pdf version</a><br />
-                </p>
-            </div>
-            <div id="cvProfile" class="cv-title">Simon Da Vall</div>
-            <p class="lead">
-                A highly successful <strong>C# / ASP.Net Analyst Programmer</strong>, with over <strong>15 years</strong> experience,
-                acquired across a diverse range of industries in a series of demanding roles. Proven success delivering projects under
-                pressurised conditions.
+        <div class="main-body-title">
+            <h4>Curriculum Vitae</h4>
+            <p class="pdf-download">
+                <img class="pdf-image" src="~/content/images/download.png" alt="" width="9" height="10" />
+                <a class="pdf-download" href="~/content/downloads/SimonDaVall-CV.pdf" target="_blank">Download pdf version</a><br />
             </p>
-            <p>
-                Whilst having the skills and confidence to work effectively as an individual, has the communication
-                and collaboration skills required to work productively in a project team environment. With the ability to hit the ground running,
-                is now seeking the next challenging and rewarding opportunity to demonstrate substantial abilities and make an effective contribution
-                in a successful, end user focussed team.
-            </p>
-
+        </div>
+            <div id="cvProfile" class="cv-title">@Model.SiteData.Name</div>
+        <p class="lead">
+            @Html.Raw(Model.SiteData.IntroLead)
+        </p>
+            @Html.Raw(Model.SiteData.Intro)
             <section id="cvEducation">
                 <h3>Education</h3>
-                <p>1994 - BEng (Hons.) Aeronautical Engineering at Imperial College, London University.</p>
+                @Html.Raw(Model.SiteData.Education)
             </section>
-
             <section>
                 <h3>Professional Qualifications</h3>
-                <ul>
-                    <li>Sitecore Developer Level 1 & 2 (Most recent Sitecore XP 7 .Net Developer)</li>
-                    <li>Microsoft Certified Professional Developer (MCPD) – Enterprise Applications Developer.</li>
-                    <li>Microsoft Certified Technology Specialist (MCTS) – C# / ASP.NET Development.</li>
-                    <li>Microsoft Certified Professional (MCP) – Desktop and Distributed Windows Applications.</li>
-                    <li>Fully qualified PRINCE2 Practitioner.</li>
-                </ul>
+                @Html.Raw(Model.SiteData.ProfessionalQuals)   
             </section>
-
             <section id="cvExpertise">
                 <h3>Expertise</h3>
-                <ul>
-                    <li>C#, ASP.NET, MVC, .Net Framework 1.1 to 4.5</li>
-                    <li>AGILE Development & TDD.</li>
-                    <li>Continuous Integration (TeamCity / NAnt / CruiseControl.Net).</li>
-                    <li>WCF REST (Xml & related data serialization) / WebAPI.</li>
-                    <li>Sitecore CMS Systems Development.</li>
-                    <li>SQL Server, MongoDB</li>
-                    <li>Design Patterns (incl. MVC & MVP). Object Orientated Analysis & Design.</li>
-                    <li>HTML5, XSLT, Javascript(JQuery), CSS presentation layer.</li>
-                </ul>
-
+                @Html.Raw(Model.SiteData.Expertise)
             </section>
             <p>
                 <a id="cv-achievements" class="smoothscroll" href="#topOfPage">Back to top</a>
@@ -73,26 +49,32 @@
                 <a id="cvExperience" class="smoothscroll" href="#topOfPage">Back to top</a>
             </p>
             <section id="workExperience">
-                <h3>Work Experience</h3>
-                <div class="cv-job">
-                    <p class="cv-client">
-                        <a data-toggle="collapse" href="#job6"><i class="fa fa-angle-down" aria-hidden="true"></i>Codehouse Group</a>
-                        <span class="cv-datespan">(Apr 2016 – Mar 2017)</span>
-                        <span class="client-weblink hidden"><a href="http://www.codehousegroup.com/" target="_blank">client website</a></span>
-                    </p>
-                    <div id="job6" class="cv-job-detail collapse">
-                        <p class="cv-role">Lead Developer / Technical Architect</p>
-                        <p class="cv-skills">Key Skills: C# 5.0 / Sitecore 6.5 / TeamCity / Octopus / Agile / NUnit</p>
-                        <div class="cv-website">
-                            <span>Websites:</span>
-                            <ul>
-                                <li><a href="http://www.mandg.com/" target="_blank">mandg.com</a></li>
-                            </ul>
+            <h3>Work Experience</h3>
+                @{
+                    foreach (var workExperience in Model.WorkExperiences)
+                    {
+                        <div class="cv-job">
+                            <p class="cv-client">
+                                <a data-toggle="collapse" href="#job6"><i class="fa fa-angle-down" aria-hidden="true"></i>Codehouse Group</a>
+                                <span class="cv-datespan">(Apr 2016 – Mar 2017)</span>
+                                <span class="client-weblink hidden"><a href="http://www.codehousegroup.com/" target="_blank">client website</a></span>
+                            </p>
+                            <div id="job6" class="cv-job-detail collapse">
+                                <p class="cv-role">Lead Developer / Technical Architect</p>
+                                <p class="cv-skills">Key Skills: C# 5.0 / Sitecore 6.5 / TeamCity / Octopus / Agile / NUnit</p>
+                                <div class="cv-website">
+                                    <span>Websites:</span>
+                                    <ul>
+                                        <li><a href="http://www.mandg.com/" target="_blank">mandg.com</a></li>
+                                    </ul>
+                                </div>
+                                <p>Returned to Codehouse to work on a number of updated features to be integrated to the M&amp;G website. These included making the site responsive to mobile viewports, and updating several sections of the existing site. Required working on a dual synchronised git branching, allowing maintenance to the existing code set whist developing the feature branch in an up to date state. Was responsible for setting up and maintaining the CI and auto deployment using TeamCity and Octopus.</p>
+                                <p>Having worked largely on more recent versions of Sitecore, it tested the powers of memory going back to the features of Sitecore 6.5</p>
+                            </div>
                         </div>
-                        <p>Returned to Codehouse to work on a number of updated features to be integrated to the M&amp;G website. These included making the site responsive to mobile viewports, and updating several sections of the existing site. Required working on a dual synchronised git branching, allowing maintenance to the existing code set whist developing the feature branch in an up to date state. Was responsible for setting up and maintaining the CI and auto deployment using TeamCity and Octopus.</p>
-                        <p>Having worked largely on more recent versions of Sitecore, it tested the powers of memory going back to the features of Sitecore 6.5</p>
-                    </div>
-                </div>
+                    }
+                }
+                
                 <div class="cv-job">
                     <p class="cv-client">
                         <a data-toggle="collapse" href="#job5"><i class="fa fa-angle-down" aria-hidden="true"></i>CPC Connect Ltd</a>
@@ -323,10 +305,7 @@
             </p>
             <section>
                 <h3>Interests</h3>
-                <ul>
-                    <li>Rugby – have played for Blackheath, Beckenham, Brighton and Hammersmith & Fulham. Currently playing and coaching minis at Teddington.</li>
-                    <li>Technology, Cycling, Skiing, Reading, Music</li>
-                </ul>
+                @Html.Raw(Model.SiteData.Interests)
             </section>
         </section>
         <section id="sidebar" class="sidebar col-md-3 col-sm-3 hidden-xs">
