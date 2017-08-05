@@ -47,7 +47,7 @@ namespace HerefordSecuritiesLtd.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Title,Narrative,SiteDataId,IsActive")] ServiceProvided serviceProvided)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Title,Narrative,SiteDataId,DisplayOrder,ImageLink,ImageAltText,IsActive")] ServiceProvided serviceProvided)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace HerefordSecuritiesLtd.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Title,Narrative,SiteDataId,IsActive")] ServiceProvided serviceProvided)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Title,Narrative,SiteDataId,DisplayOrder,ImageLink,ImageAltText,IsActive")] ServiceProvided serviceProvided)
         {
             if (ModelState.IsValid)
             {

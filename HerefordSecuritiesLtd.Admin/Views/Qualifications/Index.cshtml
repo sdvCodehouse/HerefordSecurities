@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HerefordSecuritiesLtd.Entities.Achievement>
+﻿@model IEnumerable<HerefordSecuritiesLtd.Entities.Qualification>
 
 @{
     ViewBag.Title = "Index";
@@ -20,16 +20,25 @@
 				@Html.DisplayNameFor(model => model.Title)
 			</th>
 					<th>
-				@Html.DisplayNameFor(model => model.Narrative)
+				@Html.DisplayNameFor(model => model.Text)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.ImageLink)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.ImageAltText)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.AdditionalCssClass)
+			</th>
+					<th>
+				@Html.DisplayNameFor(model => model.SiteDataId)
 			</th>
 					<th>
 				@Html.DisplayNameFor(model => model.DisplayOrder)
 			</th>
 					<th>
 				@Html.DisplayNameFor(model => model.IsActive)
-			</th>
-					<th>
-				@Html.DisplayNameFor(model => model.SiteDataId)
 			</th>
 			</tr>
 
@@ -64,7 +73,27 @@
 			</td>
 					<td>
 				<div class="table-row-condensed">
-					@Html.DisplayFor(modelItem => item.Narrative)
+					@Html.DisplayFor(modelItem => item.Text)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.ImageLink)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.ImageAltText)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.AdditionalCssClass)
+				</div>
+			</td>
+					<td>
+				<div class="table-row-condensed">
+					@Html.DisplayFor(modelItem => item.SiteDataId)
 				</div>
 			</td>
 					<td>
@@ -75,11 +104,6 @@
 					<td>
 				<div class="table-row-condensed">
 					@Html.DisplayFor(modelItem => item.IsActive)
-				</div>
-			</td>
-					<td>
-				<div class="table-row-condensed">
-					@Html.DisplayFor(modelItem => item.SiteDataId)
 				</div>
 			</td>
 			</tr>
