@@ -1,4 +1,4 @@
-﻿@using System.Reflection
+﻿@model ServicesViewModel
 @{
     ViewBag.Title = "Services";
 }
@@ -8,62 +8,24 @@
         <section id="main" class="contact-main col-md-8 col-sm-9">
             <h4 class="main-body-title">Services</h4>
             <div class="services-main">
-                <div class="service">
-                    <h3>C# / ASP.NET Development</h3>
-                    <img class="pull-right img-thumbnail white-border" src="~/Content/images/web_development.jpg" alt="Application development" />
-                    <p>Hereford Securities is first and foremost a provider of full lifecycle software development consulting services. Whether from project inception, or final push to delivery, Hereford has a proven track record for success.</p>
-                    <p>We will analyze and document your project requirements, architect, design, code, test, and deliver your web or windows software projects on time and under budget.</p>
-                    <p>We bring an expert set of business analysis, project management and software development skills to work in creating your custom software development solution. We guarantee a clean and robust software product that is easy to maintain and works like you want it to.</p>
-                    <p>Understanding that throughout the lifetime of the project, clients requirements will change, and reacting to that, being mindful of budget and time constraints. Employing Agile methodologies such as SCRUM allowing great flexibility in project delivery. </p>
-                </div>
-                <div class="service">
-                    <h3>CMS Development</h3>
-                    <img class="pull-left img-thumbnail white-border" src="~/Content/images/cms.jpg" alt="CMS development" />
-                    <p>Hereford Securities has created complicated content management systems using Sitecore and EPIServer CMS systems.</p>
-                    <p>Using Microsoft technologies to provide data components for:</p>
-                    <div>
-                        <ul>
-                            <li>Media streaming</li>
-                            <li>Remote xml data streaming</li>
-                            <li>Image presentation</li>
-                            <li>Shopping cart</li>
-                            <li>Search engine</li>
-                            <li>Membership systems</li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="service">
-                    <h3>Database Design & Development</h3>
-                    <img class="pull-right img-thumbnail white-border" src="~/Content/images/databaseDesign.jpg" alt="Database Design & Development" />
-                    <p>A carefully thought-out database design forms the foundation for future success of any solution.</p>
-                    <p>Hereford Securities are able to provide expert schema/script design and development in a fast-paced, high-growth and flexible environment. Good design and development will support the business analysts in the development of specific product requirements, through formulating designs to fulfil the requirements, and will provide development expertise to produce reliable, solid, maintainable code. Hereford Securities has experience in supporting extended life-cycle areas including implementation, database administration, and report development.</p>
-                    <p>We design, write and develop database code to support Web based applications, including utilities and queries for testing, monitoring, and administration of the database and related applications:</p>
-                    <ul>
-                        <li>Development environments include desktop, n-tier client server background and more recently Internet-based data-driven products.</li>
-                        <li>Full supporting documentation for program development and usage of application:</li>
-                        <li>Adherence to established software development guidelines and procedures.</li>
-                        <ul>
-                            <li>system specifications and sub-systems specifications.</li>
-                            <li>planning and preparation stages documentation.</li>
-                        </ul>
-                        <li>Experience in working with third-party experts to accomplish specific projects and tasks.</li>
-                        <li>Provide assistance in estimating project timelines.</li>
-                    </ul>
-                </div>
-                <div class="service">
-                    <h3>Project Management</h3>
-                    <img class="pull-left img-thumbnail white-border" src="~/Content/images/PM.jpg" alt="Project Management" />
-                    <p>Hereford Securities has a flexible approach to project management. It is recognised that each project requires tailored management. Each project manager is fully qualified to practitioner level, and is experienced in identifying the elements of the Prince2 methodology appropriate for the project and making a set of recommendations. In many cases, clients may wish to incorporate some of their own established practices to the methodology.</p>
-                    <p>We will fully discuss these requirements with the client at the outset to ensure a best practice that is truly achievable is not only agreed upon but fully understood.</p>
-                </div>
+                @{
+                    var counter = 0;
+                    foreach (var serviceProvided in Model.ServicesProvided)
+                    {
+                        <div class="service">
+                            <h3>@serviceProvided.Title</h3>
+                            <img class="@Model.ImageStyle(counter++) img-thumbnail white-border" src="@serviceProvided.ImageLink" alt="@serviceProvided.ImageAltText"/>
+                            @Html.Raw(serviceProvided.Narrative)
+                        </div>
+                    }
+                }
             </div>
         </section>
         <section id="sidebar" class="sidebar col-md-3 col-sm-3 hidden-xs">
 
             @Html.Partial("_UsefulLinks")
 
-            @Html.Partial("_Qualifications")
+            @Html.Partial("_Qualifications", Model.Qualifications)
             
         </section>
     </div>
