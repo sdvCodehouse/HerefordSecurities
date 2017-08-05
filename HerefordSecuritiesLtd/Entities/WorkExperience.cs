@@ -1,36 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace HerefordSecuritiesLtd.Entities
 {
     public class WorkExperience
     {
-        public Client Client { get; set; }
+        public int Id { get; set; }
+        public string Client { get; set; }
+        public string ClientWeblink { get; set; }
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
-        public ICollection<Skill> Skills { get; set; }
+        [AllowHtml]
+        public string ClientAdditional { get; set; }
+        public string Position { get; set; }
+        public string KeySkills { get; set; }
         public ICollection<Website> Websites { get; set; }
+        [AllowHtml]
+        [DataType(DataType.MultilineText)]
         public string Narrative { get; set; }
-    }
+        public int SiteDataId { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsRecent { get; set; }
 
-    public class Website
-    {
-        public string Title { get; set; }
-        public string Link { get; set; }
-    }
+        public string FormatedDateSpan
+        {
+            get { return string.Format("({0:MMM yy} - {1:MMM yy})", DateFrom, DateTo); }
+        }
 
-    public class Skill
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
-
-    public class Client
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public Website Weblink { get; set; }
+        public string JobId
+        {
+            get { return string.Format("job{0}", Id); }
+        }
+        public string JobIdPointer
+        {
+            get { return string.Format("#{0}", JobId); }
+        }
     }
 }

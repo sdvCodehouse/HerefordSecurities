@@ -44,6 +44,9 @@
     }
 }
 
+.black-links a{
+    color: #000000
+}
 .client-weblink {
     font-size: 0.7em;
     font-style: italic;
