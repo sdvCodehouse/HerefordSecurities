@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
 namespace HerefordSecuritiesLtd.Entities
@@ -11,8 +10,10 @@ namespace HerefordSecuritiesLtd.Entities
         [AllowHtml]
         [DataType(DataType.MultilineText)]
         public string Narrative { get; set; }
-        public ICollection<ServiceImage> Images { get; set; }
         public int SiteDataId { get; set; }
+        public int DisplayOrder { get; set; }
+        public string ImageLink { get; set; }
+        public string ImageAltText { get; set; }
         public bool IsActive { get; set; }
     }
 }

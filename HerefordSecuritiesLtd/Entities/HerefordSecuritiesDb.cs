@@ -12,9 +12,9 @@ namespace HerefordSecuritiesLtd.Entities
         public DbSet<WorkExperience> WorkExperiences { get; set; }
         public DbSet<ServiceProvided> ServicesProvided { get; set; }
         public DbSet<SiteData> SiteData { get; set; }
-        public DbSet<ServiceImage> ServiceImages { get; set; }
         public DbSet<Website> Websites { get; set; }
         public DbSet<Achievement> Achievements { get; set; }
+        public DbSet<Qualification> Qualifications { get; set; }
 
         public IEnumerable<WorkExperience> GetRecentWorkExperiencesForSite(int siteId)
         {
@@ -36,7 +36,20 @@ namespace HerefordSecuritiesLtd.Entities
 
         public IEnumerable<Achievement> GetAchievementsForSite(int siteId)
         {
-            return Achievements.Where(s => s.siteDataId == siteId && s.IsActive);
+            return Achievements.Where(s => s.SiteDataId == siteId && s.IsActive)
+                .OrderBy(s => s.DisplayOrder);
+        }
+
+        public IEnumerable<ServiceProvided> GetServicesProvidedForSite(int siteId)
+        {
+            return ServicesProvided.Where(s => s.SiteDataId == siteId && s.IsActive)
+                .OrderBy(s => s.DisplayOrder);
+        }
+
+        public IEnumerable<Qualification> GetQualifications(int siteId)
+        {
+            return Qualifications.Where(s => s.SiteDataId == siteId && s.IsActive)
+                .OrderBy(s => s.DisplayOrder);
         }
 
     }

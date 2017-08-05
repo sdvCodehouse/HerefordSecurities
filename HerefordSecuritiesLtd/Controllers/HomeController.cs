@@ -17,6 +17,7 @@ namespace HerefordSecuritiesLtd.Controllers
                 SiteData = _db.SiteData.FirstOrDefault()
             };
             model.Achievements = _db.GetAchievementsForSite(model.SiteData.Id).ToList();
+            model.Qualifications = _db.GetQualifications(model.SiteData.Id).ToList();
 
             model.RecentWorkExperiences = _db.GetRecentWorkExperiencesForSite(model.SiteData.Id).ToList();
             GetWebsitesDeveloped(model.RecentWorkExperiences);
@@ -38,13 +39,28 @@ namespace HerefordSecuritiesLtd.Controllers
         // GET: Home
         public ActionResult Services()
         {
-            return View();
+            var model = new ServicesViewModel()
+            {
+                SiteData = _db.SiteData.FirstOrDefault()
+            };
+            model.ServicesProvided = _db.GetServicesProvidedForSite(model.SiteData.Id).ToList();
+            model.Qualifications = _db.GetQualifications(model.SiteData.Id).ToList();
+
+
+
+            return View(model);
         }
 
         // GET: Home
         public ActionResult ContactMe()
         {
-            return View();
+            var model = new ContactViewModel()
+            {
+                SiteData = _db.SiteData.FirstOrDefault()
+            };
+            model.Qualifications = _db.GetQualifications(model.SiteData.Id).ToList();
+
+            return View(model);
         }
 
         protected override void Dispose(bool disposing)

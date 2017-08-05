@@ -1,34 +1,19 @@
-﻿<div class="panel panel-qualification-border">
-    <div class="panel-body">
-        <img class="img-responsive-qualification" src="~/content/images/sitecore-certified-developer.jpg" alt="Sitecore Certified Developer" />
-        <p class="mcText">
-            Sitecore® XP 7 Website Development for .NET Developers
-        </p>
-    </div>
-</div>
-<div class="panel panel-qualification">
-    <div class="panel-body">
-        <img class="img-responsive-qualification" src="~/content/images/p2logo.gif" alt="Prince2 Practitioner Qualified" />
-        <p class="mcTitle">Prince2 Practitioner</p>
-    </div>
-</div>
-<div class="panel panel-qualification">
-    <div class="panel-body">
-        <img class="img-responsive-qualification" src="~/content/images/MCPD_Logo_grey.gif" alt="Microsoft Certified Professional Developer" />
-        <p>
-            <div class="mcTitle">Enterprise Applications Developer</div>
-        </p>
-    </div>
-</div>
-<div class="panel panel-qualification">
-    <div class="panel-body">
-        <img class="img-responsive-qualification" src="~/content/images/MCTS_Logo_grey.gif" alt="Microsoft Certified Technical Specialist" />
-        <p class="mcTitle">.Net Framework</p>
-        <p class="mcText">
-            Windows Applications<br />
-            Distributed Applications<br />
-            Web Applications
-        </p>
-    </div>
-</div>
+﻿@model IEnumerable<Qualification>
+           
+@{
+    foreach (var qualification in Model)
+    {
+        <div class="panel @qualification.AdditionalCssClass">
+            <div class="panel-body">
+                <img class="img-responsive-qualification" src="@qualification.ImageLink" alt="@qualification.ImageAltText" />
+                <p class="mcTitle">
+                    @qualification.Title
+                </p>
+                <p class="mcText">
+                    @Html.Raw(qualification.Text)
+                </p>
+            </div>
+        </div>
+    }
+}
 
