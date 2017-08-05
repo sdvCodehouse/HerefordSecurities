@@ -7,3 +7,12 @@ css
 downloads
 /HerefordSecuritiesLtd/images
 /HerefordSecuritiesLtd.v12.suo
+/HerefordSecuritiesLtd.Admin/bin
+/HerefordSecuritiesLtd.Admin/obj
+/HerefordSecuritiesLtd/Properties/PublishProfiles/FileSystemDeployment.pubxml.user
+
+/Deployment
+/Builds
+/HerefordSecuritiesLtd/Properties/PublishProfiles/FileSystemLocal.pubxml.user
+
+/HerefordSecuritiesLtd/Properties/PublishProfiles/FileSystemRelease.pubxml.user
