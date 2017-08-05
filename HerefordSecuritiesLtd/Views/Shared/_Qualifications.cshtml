@@ -6,12 +6,22 @@
         <div class="panel @qualification.AdditionalCssClass">
             <div class="panel-body">
                 <img class="img-responsive-qualification" src="@qualification.ImageLink" alt="@qualification.ImageAltText" />
-                <p class="mcTitle">
-                    @qualification.Title
-                </p>
-                <p class="mcText">
-                    @Html.Raw(qualification.Text)
-                </p>
+                @{
+                    if (!string.IsNullOrWhiteSpace(qualification.Title))
+                    {
+                        <p class="mcTitle">
+                            @qualification.Title
+                        </p>
+                    }
+                }
+                @{
+                     if (!string.IsNullOrWhiteSpace(qualification.Text))
+                     {
+                         <p class="mcText">
+                             @Html.Raw(qualification.Text)
+                         </p>
+                     }
+                 }
             </div>
         </div>
     }
