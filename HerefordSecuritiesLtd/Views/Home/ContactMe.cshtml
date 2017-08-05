@@ -1,4 +1,4 @@
-﻿@using System.Reflection
+﻿@model ContactViewModel
 @{
     ViewBag.Title = "ContactMe";
 }
@@ -33,7 +33,7 @@
 
             @Html.Partial("_UsefulLinks")
 
-            @Html.Partial("_Qualifications")
+            @Html.Partial("_Qualifications", Model.Qualifications)
 
             <div class="footer-version">Version: @typeof(HerefordSecuritiesLtd.MvcApplication).Assembly.GetName().Version.ToString() </div>
         </section>

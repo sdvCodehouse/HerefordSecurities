@@ -11,107 +11,107 @@ using HerefordSecuritiesLtd.Entities;
 
 namespace HerefordSecuritiesLtd.Admin.Controllers
 {
-    public class ServiceImagesController : Controller
+    public class QualificationsController : Controller
     {
         private HerefordSecuritiesDb db = new HerefordSecuritiesDb();
 
-        // GET: ServiceImages
+        // GET: Qualifications
         public async Task<ActionResult> Index()
         {
-            return View(await db.ServiceImages.ToListAsync());
+            return View(await db.Qualifications.ToListAsync());
         }
 
-        // GET: ServiceImages/Details/5
+        // GET: Qualifications/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ServiceImage serviceImage = await db.ServiceImages.FindAsync(id);
-            if (serviceImage == null)
+            Qualification qualification = await db.Qualifications.FindAsync(id);
+            if (qualification == null)
             {
                 return HttpNotFound();
             }
-            return View(serviceImage);
+            return View(qualification);
         }
 
-        // GET: ServiceImages/Create
+        // GET: Qualifications/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ServiceImages/Create
+        // POST: Qualifications/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,ImageLink,ServiceProvidedId")] ServiceImage serviceImage)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Title,Text,ImageLink,ImageAltText,AdditionalCssClass,SiteDataId,DisplayOrder,IsActive")] Qualification qualification)
         {
             if (ModelState.IsValid)
             {
-                db.ServiceImages.Add(serviceImage);
+                db.Qualifications.Add(qualification);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(serviceImage);
+            return View(qualification);
         }
 
-        // GET: ServiceImages/Edit/5
+        // GET: Qualifications/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ServiceImage serviceImage = await db.ServiceImages.FindAsync(id);
-            if (serviceImage == null)
+            Qualification qualification = await db.Qualifications.FindAsync(id);
+            if (qualification == null)
             {
                 return HttpNotFound();
             }
-            return View(serviceImage);
+            return View(qualification);
         }
 
-        // POST: ServiceImages/Edit/5
+        // POST: Qualifications/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,ImageLink,ServiceProvidedId")] ServiceImage serviceImage)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Title,Text,ImageLink,ImageAltText,AdditionalCssClass,SiteDataId,DisplayOrder,IsActive")] Qualification qualification)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(serviceImage).State = EntityState.Modified;
+                db.Entry(qualification).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(serviceImage);
+            return View(qualification);
         }
 
-        // GET: ServiceImages/Delete/5
+        // GET: Qualifications/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ServiceImage serviceImage = await db.ServiceImages.FindAsync(id);
-            if (serviceImage == null)
+            Qualification qualification = await db.Qualifications.FindAsync(id);
+            if (qualification == null)
             {
                 return HttpNotFound();
             }
-            return View(serviceImage);
+            return View(qualification);
         }
 
-        // POST: ServiceImages/Delete/5
+        // POST: Qualifications/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            ServiceImage serviceImage = await db.ServiceImages.FindAsync(id);
-            db.ServiceImages.Remove(serviceImage);
+            Qualification qualification = await db.Qualifications.FindAsync(id);
+            db.Qualifications.Remove(qualification);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

@@ -1,4 +1,4 @@
-﻿@model HerefordSecuritiesLtd.Entities.ServiceProvided
+﻿@model HerefordSecuritiesLtd.Entities.Qualification
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>ServiceProvided</h4>
+    <h4>Qualification</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,27 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Narrative)
+            @Html.DisplayNameFor(model => model.Text)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Narrative)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SiteDataId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SiteDataId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DisplayOrder)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DisplayOrder)
+            @Html.DisplayFor(model => model.Text)
         </dd>
 
         <dt>
@@ -56,6 +40,30 @@
 
         <dd>
             @Html.DisplayFor(model => model.ImageAltText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalCssClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalCssClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteDataId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiteDataId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisplayOrder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisplayOrder)
         </dd>
 
         <dt>
