@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Achievement>
+    @{
+        if (Model != null && Model.Any())
+        {
+            <section>
+                <h3>Achievements</h3>
+                <ul>
+                    @foreach (var achievement in Model)
+                    {
+                        <li><strong>@achievement.Title</strong> – @achievement.Narrative</li>
+                    }
+                </ul>
+            </section>
+        }
+    }
