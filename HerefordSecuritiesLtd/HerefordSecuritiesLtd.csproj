@@ -184,6 +184,9 @@
     <Content Include="Views\SiteData\Details.cshtml" />
     <Content Include="Views\SiteData\Edit.cshtml" />
     <Content Include="Views\SiteData\Index.cshtml" />
+    <Content Include="Views\Home\_PageLinks.cshtml" />
+    <Content Include="Views\Home\_WorkExperience.cshtml" />
+    <Content Include="Views\Home\_Achievements.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

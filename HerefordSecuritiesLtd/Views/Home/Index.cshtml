@@ -1,7 +1,4 @@
 ﻿@model IndexViewModel
-@*@{
-        ViewBag.Title = "Index";
-    }*@
 
 <div id="main-body">
 
@@ -34,96 +31,11 @@
             <p>
                 <a id="cv-achievements" class="smoothscroll" href="#topOfPage">Back to top</a>
             </p>
-            @{
-                if (Model.Achievements != null && Model.Achievements.Any())
-                {
-                    <section>
-                        <h3>Achievements</h3>
-                        <ul>
-                            @foreach (var achievement in Model.Achievements)
-                            {
-                                <li><strong>@achievement.Title</strong> – @achievement.Narrative</li>
-                            }
-                        </ul>
-                    </section>
-                }
-            }
+            @Html.Partial("_Achievements", Model.Achievements)
             <p>
                 <a id="cvExperience" class="smoothscroll" href="#topOfPage">Back to top</a>
             </p>
-            <section id="workExperience">
-                <h3>Work Experience</h3>
-                @{
-                    foreach (var workExperience in Model.RecentWorkExperiences)
-                    {
-                        <div class="cv-job">
-                            <p class="cv-client">
-                                <a data-toggle="collapse" href="@workExperience.JobIdPointer"><i class="fa fa-angle-down" aria-hidden="true"></i>@workExperience.Client</a>
-                                <span class="cv-datespan">@workExperience.FormatedDateSpan</span>
-                                @workExperience.ClientAdditional
-                                <span class="client-weblink hidden"><a href="@workExperience.ClientWeblink" target="_blank">client website</a></span>
-                            </p>
-                            <div id="@workExperience.JobId" class="cv-job-detail collapse">
-                                <p class="cv-role">@workExperience.Position</p>
-                                <p class="cv-skills">Key Skills: @workExperience.KeySkills</p>
-
-                                @if (workExperience.Websites != null && workExperience.Websites.Count > 0)
-                                {
-                                    <div class="cv-website">
-                                        <span>Websites:</span>
-                                        <ul>
-                                            @foreach (var website in workExperience.Websites)
-                                            {
-                                                <li><a href="@website.Sitelink" target="_blank">@website.Sitename</a></li>
-                                            }
-                                        </ul>
-
-                                    </div>
-                                }
-
-                                @Html.Raw(workExperience.Narrative)
-                            </div>
-                        </div>
-                    }
-                }
-
-                <section id="otherWork">
-                    <h3 class="black-links">
-                        <a href="#otherJobs" data-toggle="collapse"><i class="fa fa-angle-down" aria-hidden="true"></i>Other Contracts and Employment</a>
-                    </h3>
-                    <div id="otherJobs" class="collapse">
-                        @{
-                            foreach (var workExperience in Model.ArchivedWorkExperiences)
-                            {
-                                <div class="cv-job">
-                                    <p class="cv-client">
-                                        <a href="@workExperience.ClientWeblink" target="_blank">@workExperience.Client</a>
-                                        <span class="cv-datespan">@workExperience.FormatedDateSpan</span>
-                                        <span class="client-footnote">@Html.Raw(workExperience.ClientAdditional)</span>
-                                    </p>
-                                    <div class="cv-job-detail">
-                                        <p class="cv-role">@workExperience.Position</p>
-                                        <p class="cv-skills">Key Skills: @workExperience.KeySkills</p>
-                                        @if (workExperience.Websites != null && workExperience.Websites.Count > 0)
-                                        {
-                                            <div class="cv-website">
-                                                <span>Websites:</span>
-                                                <ul>
-                                                    @foreach (var website in workExperience.Websites)
-                                                    {
-                                                        <li><a href="@website.Sitelink" target="_blank">@website.Sitename</a></li>
-                                                    }
-                                                </ul>
-
-                                            </div>
-                                        }
-                                    </div>
-                                </div>
-                            }
-                        }
-                    </div>
-                </section>
-            </section>
+            @Html.Partial("_WorkExperience", Model)
             <p>
                 <a id="cvInterests" class="smoothscroll" href="#topOfPage">Back to top</a>
             </p>
@@ -133,23 +45,7 @@
             </section>
         </section>
         <section id="sidebar" class="sidebar col-md-3 col-sm-3 hidden-xs">
-
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Quick Links</h2>
-                </div>
-                <div class="panel-body">
-                    <ul class="quick-links">
-                        <li><a class="smoothscroll" href="#cvProfile">Profile</a></li>
-                        <li><a class="smoothscroll" href="#cvEducation">Education</a></li>
-                        <li><a class="smoothscroll" href="#cvExpertise">Expertise</a></li>
-                        <li><a class="smoothscroll" href="#cv-achievements">Achievements</a></li>
-                        <li><a class="smoothscroll" href="#cvExperience">Work Experience</a></li>
-                        <li><a class="smoothscroll" href="#cvInterests">Interests</a></li>
-                    </ul>
-                </div>
-
-            </div>
+            @Html.Partial("_PageLinks")
             @Html.Partial("_Qualifications" , Model.Qualifications)
         </section>
     </div>
