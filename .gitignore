@@ -16,3 +16,6 @@ downloads
 /HerefordSecuritiesLtd/Properties/PublishProfiles/FileSystemLocal.pubxml.user
 
 /HerefordSecuritiesLtd/Properties/PublishProfiles/FileSystemRelease.pubxml.user
+/HerefordSecuritiesLtd.Tests/bin
+
+/HerefordSecuritiesLtd.Tests/obj
