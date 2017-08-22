@@ -173,6 +173,7 @@
     <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\ServicesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CachingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
