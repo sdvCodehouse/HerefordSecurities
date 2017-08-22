@@ -28,10 +28,12 @@ Export from local db.
 6. Uncheck __migrationhistory.
 7. Make sure Dump Structure and Data is selected in dropdown.
 8. Check the Export to Self-Containing File radio button.
-9. Uncheck the Include Create Schema if checked.
+9. Check the Include Create Schema.
 10. Click Start Export.
-11. Continue passed any versioning errors that may appear.
+11. Continue past any versioning errors that may appear.
 12. Check data export finished without errors.
+
+This expoerted to C:\Users\Simon\Documents\dumps\Dump##########.sql
 
 Upload to 123-reg.
 1. Log into 123-reg Control Panel and go to Manage Domain | Manage Web hosting.

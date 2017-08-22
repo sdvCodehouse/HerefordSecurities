@@ -149,6 +149,8 @@
     <Content Include="CodeTemplates\MvcView\List.cs.t4" />
     <Content Include="CodeTemplates\MvcView\ModelMetadataFunctions.cs.include.t4" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Scripts\AdminSite.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
