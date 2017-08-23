@@ -11,6 +11,7 @@ namespace HerefordSecuritiesLtd.Controllers
     {
         private readonly HerefordSecuritiesDb _db = new HerefordSecuritiesDb();
         // GET: Home
+        [OutputCache(Duration = 84600)]
         public ActionResult Index()
         {
             var model = CachingService.GetFromCache<IndexViewModel>("HomeIndex");
@@ -29,7 +30,7 @@ namespace HerefordSecuritiesLtd.Controllers
                     model.ArchivedWorkExperiences = _db.GetArchivedWorkExperiencesForSite(model.SiteData.Id).ToList();
                     LoadWebsitesDeveloped(model.ArchivedWorkExperiences);
                 }
-                CachingService.InsertToCache("IndexViewModel", model);
+                CachingService.AddToCache("HomeIndex", model);
             }
             
             return View(model);
@@ -47,7 +48,7 @@ namespace HerefordSecuritiesLtd.Controllers
         // GET: Home
         public ActionResult Services()
         {
-            var model = CachingService.GetFromCache<ServicesViewModel>("HomeServices");
+            var model = CachingService.GetFromCache<ServicesViewModel>("ServicesViewModel");
 
             if (model == null)
             {
@@ -55,10 +56,13 @@ namespace HerefordSecuritiesLtd.Controllers
                 {
                     SiteData = _db.SiteData.FirstOrDefault()
                 };
+            if (model.SiteData != null)
+            {
                 model.ServicesProvided = _db.GetServicesProvidedForSite(model.SiteData.Id).ToList();
                 model.Qualifications = _db.GetQualifications(model.SiteData.Id).ToList();
+            }
 
-                CachingService.InsertToCache("ServicesViewModel", model);
+            CachingService.AddToCache("ServicesViewModel", model);
             }
             return View(model);
         }
@@ -66,7 +70,7 @@ namespace HerefordSecuritiesLtd.Controllers
         // GET: Home
         public ActionResult ContactMe()
         {
-            var model = CachingService.GetFromCache<ContactViewModel>("HomeServices");
+            var model = CachingService.GetFromCache<ContactViewModel>("ContactViewModel");
 
             if (model == null)
             {
@@ -74,9 +78,9 @@ namespace HerefordSecuritiesLtd.Controllers
                 {
                     SiteData = _db.SiteData.FirstOrDefault()
                 };
-                model.Qualifications = _db.GetQualifications(model.SiteData.Id).ToList();
+            if (model.SiteData != null) model.Qualifications = _db.GetQualifications(model.SiteData.Id).ToList();
 
-                CachingService.InsertToCache("ContactViewModel", model);
+            CachingService.AddToCache("ContactViewModel", model);
             }
             return View(model);
         }

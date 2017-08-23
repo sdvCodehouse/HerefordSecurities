@@ -1,38 +1,32 @@
 ﻿using System;
-using System.Web.Caching;
+using System.Runtime.Caching;
 
 namespace HerefordSecuritiesLtd.Services
 {
     public static class CachingService
     {
-        public static Cache Cache = new Cache();
-
-        public static bool IsActive
-        {
-            // todo set Cache.IsActive in config
-            get { return true; }
-        }
+        private static ObjectCache cache = MemoryCache.Default;
 
         public static T GetFromCache<T>(string key) where T : class
         {
-            if (IsActive && HasKey(key))
-            {
-                return Cache.Get(key) as T;
-            }
-            return null;
+            var cachedItem = cache.Get(key);
+            return cachedItem as T;
         }
 
-        public static void InsertToCache<T>(string key, T itemToCache)
+        public static void AddToCache<T>(string key, T obj) where T : class
         {
-            if (!IsActive) return;
-            Cache.Remove(key);
-            // todo add expiry duration to config
-            Cache.Insert(key, itemToCache, null, DateTime.UtcNow.AddDays(1), Cache.NoSlidingExpiration);
+            // todo set the expiration in config
+            cache.Set(key, obj, DateTimeOffset.UtcNow.AddDays(30));
+        }
+
+        public static void RemoveFromCache(string key)
+        {
+            cache.Remove(key);
         }
 
         public static bool HasKey(string key)
         {
-            return Cache[key] != null;
+            return cache.Contains(key);
         }
     }
 }
