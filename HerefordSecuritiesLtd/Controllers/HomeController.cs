@@ -11,7 +11,6 @@ namespace HerefordSecuritiesLtd.Controllers
     {
         private readonly HerefordSecuritiesDb _db = new HerefordSecuritiesDb();
         // GET: Home
-        [OutputCache(Duration = 84600)]
         public ActionResult Index()
         {
             var model = CachingService.GetFromCache<IndexViewModel>("HomeIndex");
